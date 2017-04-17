@@ -9,7 +9,7 @@ module.exports = {
     app: './main.js',
   },
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname),
     filename: '[name].[hash].js'
   },
   externals: {
@@ -30,6 +30,7 @@ module.exports = {
       template: './index.html'
     }),
     new CopyWebpackPlugin([ 
+      { from: { glob: 'lib/**/*' } },
       { from: { glob: 'content/*.md' } },
       { from: { glob: 'content/images/*' } }
     ])

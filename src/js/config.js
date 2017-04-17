@@ -1,6 +1,7 @@
 import Reveal from 'reveal';
 
-var libPath = '../node_modules/reveal.js/';
+// var libPath = '../node_modules/reveal.js/';
+var libPath = 'lib/revealjs/';
 
 Reveal.initialize({
   center: false,
