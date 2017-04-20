@@ -51,12 +51,18 @@ Notes:
 
 ## Step 2: React Router
 
-Match `/women` path to wildcard route, render `<DynamicPage />` container
+<p class="fragment" data-fragment-index="0">
+  Check declared routes
+</p>
+
+<p class="fragment" data-fragment-index="1">
+  Match `/women` path to wildcard route, render `<DynamicPage />` container
+</p>
 
 <pre><code data-noescape>&lt;Route path="/" component={App}&gt;
-  <span class="fragment">&lt;Route path="/product/:code" component={ProductPage} /&gt;
+  <span class="fragment" data-fragment-index="0">&lt;Route path="/product/:code" component={ProductPage} /&gt;
   &lt;Route path="/checkout" component={CheckoutPage} /&gt;</span>
-  <span class="fragment">&lt;Route path="&#42" component={DynamicPage} /&gt;</span>
+  <span class="fragment" data-fragment-index="1">&lt;Route path="&#42" component={DynamicPage} /&gt;</span>
 &lt;/Route&gt;
 </code></pre>
 
@@ -141,7 +147,9 @@ Notes:
 
 ---
 
-### Configure assets
+### `<TopStory />` Step 1: Configure assets
+
+Turn CMS image props...
 
 ```js
 {
@@ -155,6 +163,10 @@ Notes:
 }
 ```
 
+<p class="fragment" data-fragment-index="1">
+  ...into responsive image (with a little help from `lazysizes`)
+</p>
+
 ```
 <img
   class="lazyload"
@@ -164,13 +176,11 @@ Notes:
 ```
 <!-- .element: class="fragment" data-fragment-index="1"-->
 
-<p class="fragment" data-fragment-index="1">
-  (With a little help from `lazysizes`)
-</p>
-
 ---
 
-### Fetch product data
+### `<TopStory />` Step 2: Fetch product data
+
+Turn product IDs...
 
 ```js
 {
@@ -185,58 +195,37 @@ Notes:
 }
 ```
 
+<p class="fragment" data-fragment-index="1">
+  ...into `<ProductTile />` components
+</ProductTile>
+
 ```
-<img
-  class="lazyload"
-  data-sizes="auto"
-  data-srcset="//media.aldoshoes.com/assets/pastel__400 400w,
-               //media.aldoshoes.com/assets/pastel__1200 1200w" />
+<ProductTile
+  name="Stessy"
+  url="/product/123"
+  price="$100"
+  salePrice="$50" />
+
+<ProductTile
+  name="Nika"
+  url="/product/456"
+  price="$40" />
 ```
 <!-- .element: class="fragment" data-fragment-index="1"-->
-
-<p class="fragment" data-fragment-index="1">
-  (With a little help from `lazysizes`)
-</p>
 
 ---
 
-### Map properties
+### `<TopStory />` Step 3: Render `<TopStory />`
 
 Turn CMS properties...
 
-```js
-{
-  "looks": {
-    "look-0": {
-      "title": "Pretty In Pastel",
-      "content": "Light hues, heavy on style",
-      "cta": {
-        "title": "Shop",
-        "link": "/women/pastels",
-      },
-      "front-asset": { ... },
-      "back-asset": { ... },
-      "featured-products": { ... }
-    },
-    "look-1": { ... }
-  }
-}
-```
-
-<p class="fragment" data-fragment-index="1">
-  ...into `<TopStory />` component
-</p>
-
-```
-<div className="top-story">
-  <div className="top-story__slide">
-    <h2>{title}</h2>
-    <p>{content}</p>
-    <Link to="ctaLink">{ctaTitle}</Link>
-    <Img {...imageProps} />
-    <FeatureProducts {...featuredProductProps} />
-  </div>
-  <div className="top-story__slide">...</div>
-</div>
-```
-<!-- .element: class="fragment" data-fragment-index="1"-->
+<pre><code data-noescape>&lt;div className="top-story"&gt;
+  &lt;div className="top-story__slide"&gt;
+    <span class="fragment" data-fragment-index="3">&lt;h2&gt;{title}&lt;/h2&gt;</span>
+    <span class="fragment" data-fragment-index="3">&lt;p&gt;{content}&lt;/p&gt;</span>
+    <span class="fragment" data-fragment-index="3">&lt;Link to="ctaLink"&gt;{ctaTitle}&lt;/Link&gt;</span>
+    <span class="fragment" data-fragment-index="1">&lt;Img {...imageProps} /&gt;</span>
+    <span class="fragment" data-fragment-index="2">&lt;FeaturedProducts {...featuredProductProps} /&gt;</span>
+  &lt;/div&gt;
+  &lt;div className="top-story__slide"&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
