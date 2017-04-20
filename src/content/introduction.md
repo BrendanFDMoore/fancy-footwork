@@ -1,14 +1,12 @@
-<!-- .slide: data-background="../content/images/title-slide.jpg" -->
-
 <!-- Rangle.io logo indicator should use H4 -->
-#### Rangle.io
+#### Rangle.io and Work & Co
 
 <!-- Only one H1 should be used per slide -->
-# My Reveal.js Presentation
-
+# Fancy Footwork: Creating composable CMS components for Aldo Shoes
 
 ---
 
-## Title
+## Introductions
 
-- Slide 1
+- Brendan Moore
+- Sarah Mogin

@@ -1,5 +1,3 @@
-<!-- .slide: data-background="../content/images/title-slide.jpg" -->
-
 ## Above the Line Title
 
 # Center Line Title

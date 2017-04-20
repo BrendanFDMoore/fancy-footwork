@@ -22,7 +22,7 @@ module.exports = {
         loaders: ["style", "css", "sass"]
       },
       { test: /\.css$/, loaders: ["style", "css"] },
-      { test: /\.(eot|svg|ttf|woff|woff2)$/, loaders: ['file'] }
+      { test: /\.(eot|svg|png|ttf|woff|woff2)$/, loaders: ['file'] }
     ]
   },
   plugins: [
