@@ -24,7 +24,7 @@ Notes:
 ## Step 1: Fetch CMS data
 
 <p class="fragment" data-fragment-index="0">
-  On route change, hit api/cms?page=**/women**&locale=**us**&language=**en_US**
+  On route change, hit <code data-noescape>api/cms?page=**/women**&locale=**us**&language=**en_US**</code>
 </p>
 
 Get JSON back:<!-- .element: class="fragment" data-fragment-index="1" -->
@@ -197,25 +197,25 @@ Notes:
 ### `<TopStory />` Step 2: Fetch product data
 
 <p class="fragment" data-fragment-index="0">
-  Turn product IDs...
+  Get product IDs
 </p>
 
 ```js
 {
   "featured-products": {
-    "feature-product-0": {
-      "id": "123",
-    },
-    "feature-product-1": {
-      "id": "456",
-    }
+    "featured-product-0": { "id": "123" },
+    "featured-product-1": { "id": "456" }
   }
 }
 ```
 <!-- .element: class="fragment" data-fragment-index="0"-->
 
 <p class="fragment" data-fragment-index="1">
-  ...into `<ProductTile />` components
+  Get details from <code data-noescape>api/product-details?codes=**123**,**456**</code>
+</ProductTile>
+
+<p class="fragment" data-fragment-index="2">
+  Render `<ProductTile />` components
 </ProductTile>
 
 ```
@@ -228,9 +228,9 @@ Notes:
 <ProductTile
   name="Nika"
   url="/product/456"
-  price="$40" />
+  price="$20" />
 ```
-<!-- .element: class="fragment" data-fragment-index="1"-->
+<!-- .element: class="fragment" data-fragment-index="2"-->
 
 ---
 
@@ -289,7 +289,7 @@ Notes:
     &lt;MainStory /&gt;
     &lt;GetInspired /&gt;
     &lt;TrackOrder /&gt;</span>
-    
+
   &lt;/main&gt;</span>
 
   <span class="fragment" data-fragment-index="0">&lt;Footer /&gt;</span>
