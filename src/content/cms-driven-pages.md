@@ -1,30 +1,36 @@
-## CMS-Driven Pages
+## CMS-driven pages
 
 ---
 
 ![Women's shoes](content/images/home.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px;" -->
 
+Notes:
+Homepage
+
 ---
 
 ![Women's shoes](content/images/plp.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px;" -->
+
+Notes:
+Product grid pages
 
 ---
 
 ![Women's shoes](content/images/women.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px;" -->
 
+Notes:
+Gender landing pages
+
 ---
 
 ## What happens when you go to **aldoshoes.com/us/en_US/women**?
-
-Notes:
-- The easiest way to explain this is to tell you a story, so let's talk about what happens when you go to the women's landing page on aldoshoes.com.
 
 ---
 
 ## Step 1: Fetch CMS data
 
 <p class="fragment" data-fragment-index="0">
-  On route change, hit <code data-noescape>api/cms?page=**/women**&locale=**us**&language=**en_US**</code>
+  On route change, hit <code data-noescape>cms?page=**/women**&locale=**us**&language=**en_US**</code>
 </p>
 
 Get JSON back:<!-- .element: class="fragment" data-fragment-index="1" -->
@@ -44,10 +50,9 @@ Get JSON back:<!-- .element: class="fragment" data-fragment-index="1" -->
 <!-- .element: class="fragment" data-fragment-index="1" -->
 
 Notes:
-- Every time our app gets a new route, we fire off a request to the CMS for data associated with the new path in the given storefront (in this case US English).
-- If the CMS has data for that page, we'll need a list of content modules back.
-- If not, we'll get nothing.
-- For now, we just need to keep track of the fact we got a response.
+- Request CMS data on route change
+- Get list of content modules
+- For now, just keep track of the fact we got a response
 
 ---
 
@@ -72,9 +77,9 @@ Notes:
 </code></pre>
 
 Notes:
-- This is a simplification of our application's routes
-- But we do have fewer than you might think, because we have so many pages generated entirely by the CMS
-- `/women` doesn't match any of our declared routes, so we'll render the `<DynamicPage />` component
+- Check declared routes
+- We don't have many routes because we have so many CMS pages
+- `/women` doesn't match, so render the `<DynamicPage />` component
 
 ---
 
@@ -143,10 +148,6 @@ Notes:
 <TrackOrder />
 ```
 <!-- .element: class="fragment" data-fragment-index="1"-->
-
----
-
-## Step 5: Render React components
 
 ---
 
@@ -272,10 +273,6 @@ Notes:
 </p>
 
 <p class="fragment" data-fragment-index="1">
-  CMS wrapper
-</p>
-
-<p class="fragment" data-fragment-index="2">
   CMS modules
 </p>
 
@@ -283,9 +280,9 @@ Notes:
 
   <span class="fragment" data-fragment-index="0">&lt;Header /&gt;</span>
 
-  <span class="fragment" data-fragment-index="1">&lt;main className="cms-page"&gt;
+  &lt;main&gt;
 
-    <span class="fragment" data-fragment-index="2">&lt;TopStory /&gt;
+    <span class="fragment" data-fragment-index="1">&lt;TopStory /&gt;
     &lt;MainStory /&gt;
     &lt;GetInspired /&gt;
     &lt;TrackOrder /&gt;</span>
@@ -295,3 +292,13 @@ Notes:
   <span class="fragment" data-fragment-index="0">&lt;Footer /&gt;</span>
 
 &lt;/body&gt;</code></pre>
+
+---
+
+## Summary
+
+- Infinite arbitrary pages<!-- .element: class="fragment" -->
+- No deployment<!-- .element: class="fragment" -->
+- Localized<!-- .element: class="fragment" -->
+- Responsive images<!-- .element: class="fragment" -->
+- Up-to-date product data<!-- .element: class="fragment" -->
