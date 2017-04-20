@@ -23,7 +23,9 @@ Notes:
 
 ## Step 1: Fetch CMS data
 
-On route change, hit api/cms?page=**/women**&locale=**us**&language=**en_US**
+<p class="fragment" data-fragment-index="0">
+  On route change, hit api/cms?page=**/women**&locale=**us**&language=**en_US**
+</p>
 
 Get JSON back:<!-- .element: class="fragment" data-fragment-index="1" -->
 
@@ -56,30 +58,39 @@ Notes:
 </p>
 
 <p class="fragment" data-fragment-index="1">
-  Match `/women` path to wildcard route, render `<DynamicPage />` container
+  Match `/women` path to wildcard route, render `<DynamicPage />` component
 </p>
 
 <pre><code data-noescape>&lt;Route path="/" component={App}&gt;
+
   <span class="fragment" data-fragment-index="0">&lt;Route path="/product/:code" component={ProductPage} /&gt;
   &lt;Route path="/checkout" component={CheckoutPage} /&gt;</span>
+
   <span class="fragment" data-fragment-index="1">&lt;Route path="&#42" component={DynamicPage} /&gt;</span>
+
 &lt;/Route&gt;
 </code></pre>
 
 Notes:
 - This is a simplification of our application's routes
 - But we do have fewer than you might think, because we have so many pages generated entirely by the CMS
-- `/women` doesn't match any of our declared routes, so we'll render the `<DynamicPage />` container
+- `/women` doesn't match any of our declared routes, so we'll render the `<DynamicPage />` component
 
 ---
 
 ## Step 3: Render `<DynamicPage />`
 
-Determine content has loaded, render `<CMSCustomPage />` container
+<p class="fragment" data-fragment-index="0">
+  Wait for completed request
+</p>
+
+<p class="fragment" data-fragment-index="1">
+  Confirm data present, render `<CMSCustomPage />` component
+</p>
 
 <pre><code data-trim data-noescape>
 function DynamicPage(props) {
-  const {
+  <span class="fragment" data-fragment-index="0">const {
     <span class="fragment" data-fragment-index="1">hasContentModules,</span>
     hasFetchedPage,
   } = props;
@@ -92,7 +103,7 @@ function DynamicPage(props) {
     return &lt;CMSCustomPage /&gt;; // Pick me!
   }
 
-  return &lt;NotFoundPage /&gt;;</span>
+  return &lt;NotFoundPage /&gt;;</span></span>
 }
 </code></pre>
 
@@ -103,11 +114,13 @@ Notes:
 
 ---
 
-## Step 4: Map CMS modules to Redux containers
+## Step 4: Map CMS modules to React components
 
-Turn CMS data...
+<p class="fragment" data-fragment-index="0">
+  Turn CMS data...
+</p>
 
-<pre><code data-noescape>{
+<pre class="fragment" data-fragment-index="0"><code data-noescape>{
   "content-uuid-01": {
     "content-modules": {
       "uuid-01": { "type": "top-story", ... },
@@ -120,7 +133,7 @@ Turn CMS data...
 </code></pre>
 
 <p class="fragment" data-fragment-index="1">
-  ...into Redux containers
+  ...into React components
 </p>
 
 ```
@@ -133,7 +146,7 @@ Turn CMS data...
 
 ---
 
-## Step 4: Render CMS container - `<TopStory />`
+## Step 5: Render React components
 
 ---
 
@@ -149,7 +162,9 @@ Notes:
 
 ### `<TopStory />` Step 1: Configure assets
 
-Turn CMS image props...
+<p class="fragment" data-fragment-index="0">
+  Turn CMS image props...
+</p>
 
 ```js
 {
@@ -162,6 +177,7 @@ Turn CMS image props...
   }
 }
 ```
+<!-- .element: class="fragment" data-fragment-index="0"-->
 
 <p class="fragment" data-fragment-index="1">
   ...into responsive image (with a little help from `lazysizes`)
@@ -180,7 +196,9 @@ Turn CMS image props...
 
 ### `<TopStory />` Step 2: Fetch product data
 
-Turn product IDs...
+<p class="fragment" data-fragment-index="0">
+  Turn product IDs...
+</p>
 
 ```js
 {
@@ -194,6 +212,7 @@ Turn product IDs...
   }
 }
 ```
+<!-- .element: class="fragment" data-fragment-index="0"-->
 
 <p class="fragment" data-fragment-index="1">
   ...into `<ProductTile />` components
@@ -215,17 +234,64 @@ Turn product IDs...
 
 ---
 
-### `<TopStory />` Step 3: Render `<TopStory />`
+### `<TopStory />` Step 3: Render `<TopStory />` component
 
-Turn CMS properties...
+<p class="fragment" data-fragment-index="0">
+  Render assets
+</p>
+
+<p class="fragment" data-fragment-index="1">
+  Render products
+</p>
+
+<p class="fragment" data-fragment-index="2">
+  Map properties
+</p>
 
 <pre><code data-noescape>&lt;div className="top-story"&gt;
   &lt;div className="top-story__slide"&gt;
-    <span class="fragment" data-fragment-index="3">&lt;h2&gt;{title}&lt;/h2&gt;</span>
-    <span class="fragment" data-fragment-index="3">&lt;p&gt;{content}&lt;/p&gt;</span>
-    <span class="fragment" data-fragment-index="3">&lt;Link to="ctaLink"&gt;{ctaTitle}&lt;/Link&gt;</span>
-    <span class="fragment" data-fragment-index="1">&lt;Img {...imageProps} /&gt;</span>
-    <span class="fragment" data-fragment-index="2">&lt;FeaturedProducts {...featuredProductProps} /&gt;</span>
+
+    <span class="fragment" data-fragment-index="2">&lt;h2&gt;{title}&lt;/h2&gt;</span>
+    <span class="fragment" data-fragment-index="2">&lt;p&gt;{content}&lt;/p&gt;</span>
+    <span class="fragment" data-fragment-index="2">&lt;Link to="ctaLink"&gt;{ctaTitle}&lt;/Link&gt;</span>
+
+    <span class="fragment" data-fragment-index="0">&lt;Img {...imageProps} /&gt;</span>
+
+    <span class="fragment" data-fragment-index="1">&lt;FeaturedProducts {...featuredProductProps} /&gt;</span>
+
   &lt;/div&gt;
   &lt;div className="top-story__slide"&gt;...&lt;/div&gt;
 &lt;/div&gt;</code></pre>
+
+---
+
+## Step 6: Put it all together
+
+<p class="fragment" data-fragment-index="0">
+  App header and footer
+</p>
+
+<p class="fragment" data-fragment-index="1">
+  CMS wrapper
+</p>
+
+<p class="fragment" data-fragment-index="2">
+  CMS modules
+</p>
+
+<pre><code data-noescape>&lt;body&gt;
+
+  <span class="fragment" data-fragment-index="0">&lt;Header /&gt;</span>
+
+  <span class="fragment" data-fragment-index="1">&lt;main className="cms-page"&gt;
+
+    <span class="fragment" data-fragment-index="2">&lt;TopStory /&gt;
+    &lt;MainStory /&gt;
+    &lt;GetInspired /&gt;
+    &lt;TrackOrder /&gt;</span>
+    
+  &lt;/main&gt;</span>
+
+  <span class="fragment" data-fragment-index="0">&lt;Footer /&gt;</span>
+
+&lt;/body&gt;</code></pre>
