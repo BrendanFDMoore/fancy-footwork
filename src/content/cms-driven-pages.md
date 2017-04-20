@@ -23,8 +23,9 @@ Notes:
 
 ## Step 1: Fetch CMS data
 
-- On route change, hit api/cms?page=**/women**&locale=**us**&language=**en_US**
-- Get JSON back:<!-- .element: class="fragment" data-fragment-index="1" -->
+On route change, hit api/cms?page=**/women**&locale=**us**&language=**en_US**
+
+Get JSON back:<!-- .element: class="fragment" data-fragment-index="1" -->
 
 ```js
 {
@@ -68,7 +69,7 @@ Notes:
 
 ## Step 3: Render `<DynamicPage />`
 
-Render `<CMSCustomPage />` container
+Determine content has loaded, render `<CMSCustomPage />` container
 
 <pre><code data-trim data-noescape>
 function DynamicPage(props) {
@@ -82,10 +83,10 @@ function DynamicPage(props) {
   }
 
   <span class="fragment" data-fragment-index="1">if (hasContentModules) {
-    return &lt;CMSCustomPage /&gt;;
+    return &lt;CMSCustomPage /&gt;; // Pick me!
   }
 
-  return &lt;NotFoundPage /&gt;; // :-(</span>
+  return &lt;NotFoundPage /&gt;;</span>
 }
 </code></pre>
 
@@ -97,6 +98,8 @@ Notes:
 ---
 
 ## Step 4: Map CMS modules to Redux containers
+
+Turn CMS data...
 
 <pre><code data-noescape>{
   "content-uuid-01": {
@@ -110,10 +113,130 @@ Notes:
 }
 </code></pre>
 
+<p class="fragment" data-fragment-index="1">
+  ...into Redux containers
+</p>
+
 ```
 <TopStory />
 <MainStory />
 <GetInspired />
 <TrackOrder />
 ```
-<!-- .element: class="fragment"-->
+<!-- .element: class="fragment" data-fragment-index="1"-->
+
+---
+
+## Step 4: Render CMS container - `<TopStory />`
+
+---
+
+![Women's shoes](content/images/top-story.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px;" -->
+
+Notes:
+- Some features to highlight...
+- Title and description
+- Front and back images
+- Products with prices (need to be up to date)
+
+---
+
+### Configure assets
+
+```js
+{
+  "front-asset": {
+    "dimensions": [
+      { "h": "400", "w": "400" },
+      { "h": "1200", "w": "1200" }
+    ],
+    "url": "//media.aldoshoes.com/assets/pastel__[dimension].jpg"
+  }
+}
+```
+
+```
+<img
+  class="lazyload"
+  data-sizes="auto"
+  data-srcset="//media.aldoshoes.com/assets/pastel__400 400w,
+               //media.aldoshoes.com/assets/pastel__1200 1200w" />
+```
+<!-- .element: class="fragment" data-fragment-index="1"-->
+
+<p class="fragment" data-fragment-index="1">
+  (With a little help from `lazysizes`)
+</p>
+
+---
+
+### Fetch product data
+
+```js
+{
+  "featured-products": {
+    "feature-product-0": {
+      "id": "123",
+    },
+    "feature-product-1": {
+      "id": "456",
+    }
+  }
+}
+```
+
+```
+<img
+  class="lazyload"
+  data-sizes="auto"
+  data-srcset="//media.aldoshoes.com/assets/pastel__400 400w,
+               //media.aldoshoes.com/assets/pastel__1200 1200w" />
+```
+<!-- .element: class="fragment" data-fragment-index="1"-->
+
+<p class="fragment" data-fragment-index="1">
+  (With a little help from `lazysizes`)
+</p>
+
+---
+
+### Map properties
+
+Turn CMS properties...
+
+```js
+{
+  "looks": {
+    "look-0": {
+      "title": "Pretty In Pastel",
+      "content": "Light hues, heavy on style",
+      "cta": {
+        "title": "Shop",
+        "link": "/women/pastels",
+      },
+      "front-asset": { ... },
+      "back-asset": { ... },
+      "featured-products": { ... }
+    },
+    "look-1": { ... }
+  }
+}
+```
+
+<p class="fragment" data-fragment-index="1">
+  ...into `<TopStory />` component
+</p>
+
+```
+<div className="top-story">
+  <div className="top-story__slide">
+    <h2>{title}</h2>
+    <p>{content}</p>
+    <Link to="ctaLink">{ctaTitle}</Link>
+    <Img {...imageProps} />
+    <FeatureProducts {...featuredProductProps} />
+  </div>
+  <div className="top-story__slide">...</div>
+</div>
+```
+<!-- .element: class="fragment" data-fragment-index="1"-->
