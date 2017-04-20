@@ -2,9 +2,19 @@
 
 ---
 
-## What happens when you go to **aldoshoes.com/us/en_US/women**?
+![Women's shoes](content/images/home.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px;" -->
 
-![Women's shoes](content/images/women.png)
+---
+
+![Women's shoes](content/images/plp.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px;" -->
+
+---
+
+![Women's shoes](content/images/women.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px;" -->
+
+---
+
+## What happens when you go to **aldoshoes.com/us/en_US/women**?
 
 Notes:
 - The easiest way to explain this is to tell you a story, so let's talk about what happens when you go to the women's landing page on aldoshoes.com.
@@ -13,7 +23,7 @@ Notes:
 
 ## Step 1: Fetch CMS data
 
-- Hit api/cms?page=**/women**&locale=**us**&language=**en_US**
+- On route change, hit api/cms?page=**/women**&locale=**us**&language=**en_US**
 - Get JSON back:<!-- .element: class="fragment" data-fragment-index="1" -->
 
 ```js
@@ -40,7 +50,7 @@ Notes:
 
 ## Step 2: React Router
 
-Match wildcard route to `<DynamicPage />` container
+Match `/women` path to wildcard route, render `<DynamicPage />` container
 
 <pre><code data-noescape>&lt;Route path="/" component={App}&gt;
   <span class="fragment">&lt;Route path="/product/:code" component={ProductPage} /&gt;
@@ -49,22 +59,61 @@ Match wildcard route to `<DynamicPage />` container
 &lt;/Route&gt;
 </code></pre>
 
+Notes:
+- This is a simplification of our application's routes
+- But we do have fewer than you might think, because we have so many pages generated entirely by the CMS
+- `/women` doesn't match any of our declared routes, so we'll render the `<DynamicPage />` container
+
 ---
 
 ## Step 3: Render `<DynamicPage />`
 
-- Using special separators, you can have "stacked" vertical slides. Press down to see the lower slides, or skip it by pressing right.
+Render `<CMSCustomPage />` container
 
-+++
+<pre><code data-trim data-noescape>
+function DynamicPage(props) {
+  const {
+    <span class="fragment" data-fragment-index="1">hasContentModules,</span>
+    hasFetchedPage,
+  } = props;
 
-## Skippable Vertical Section
+  if (!hasFetchedPage) {
+    return &lt;Loader&gt;;
+  }
 
-- This has some extra information that can be skipped if you are short on time
-- You debated excluding this anyways, didn't you?
+  <span class="fragment" data-fragment-index="1">if (hasContentModules) {
+    return &lt;CMSCustomPage /&gt;;
+  }
+
+  return &lt;NotFoundPage /&gt;; // :-(</span>
+}
+</code></pre>
+
+Notes:
+- First check if we've fetched data for the current route. If not, render a loading screen.
+- If we have, check if we have content modules on the store. We got CMS data back for `/women`, so this is true.
+- If we had hit a crazy route, like aldoshoes.com/banana, we would not have gotten any CMS data back, and we'd render the 404 page!
 
 ---
 
-## The Next Important Slide
+## Step 4: Map CMS modules to Redux containers
 
-- This is what you need to get to if you're running behind.
-- Skip over the verticals and get here
+<pre><code data-noescape>{
+  "content-uuid-01": {
+    "content-modules": {
+      "uuid-01": { "type": "top-story", ... },
+      "uuid-01": { "type": "main-story", ... },
+      "uuid-01": { "type": "get-inspired", ... },
+      "uuid-01": { "type": "track-order", ... },
+    }
+  }
+}
+</code></pre>
+
+```
+<TopStory />
+<MainStory />
+<GetInspired />
+<TrackOrder />
+```
+<!-- .element: class="fragment"-->
