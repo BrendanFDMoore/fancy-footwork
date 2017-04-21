@@ -152,6 +152,10 @@ body {
     > section > section {
       padding: 10px 0;
     }
+
+    section {
+      width: calc(100% - 175px);
+    }
   }
 
   // Code block styling
