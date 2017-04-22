@@ -55,8 +55,8 @@ Get JSON back:<!-- .element: class="fragment" data-fragment-index="1" -->
       "uuid-02": { 
         "type": "accordion",
         "content-modules": {
-          "uuid-03": { "type": "accordion-entry" },
-          "uuid-04": { "type": "accordion-entry" },
+          "uuid-03": { "type": "accordion-item" },
+          "uuid-04": { "type": "accordion-item" },
         }
       },
     }
@@ -207,6 +207,6 @@ Notes:
 ## Summary
 
 - Dynamic content can be built into any fixed page<!-- .element: class="fragment" -->
-- Unlike custom pages, we generally do not wait.<!-- .element: class="fragment" -->
+- Unlike custom pages, we generally do not wait<!-- .element: class="fragment" -->
 - Fixed content takes priority<!-- .element: class="fragment" -->
 - React + redux allow us to redraw when we get CMS data<!-- .element: class="fragment" -->
