@@ -7,7 +7,7 @@ Notes:
 
 ## Checkout Policies
 
-![Checkout](content/images/checkout-1.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px;" -->
+![Checkout](content/images/checkout-1.png)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
 
 Notes:
 - These policies are accordians, rendered from CMS modules
@@ -17,19 +17,19 @@ Notes:
 
 ## Checkout Policies
 
-![Checkout](content/images/checkout-2.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px;" -->
+![Checkout](content/images/checkout-2.png)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
 
 +++
 
 ## Checkout Policies
 
-![Checkout](content/images/checkout-3.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px;" -->
+![Checkout](content/images/checkout-3.png)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
 
 ---
 
 ## Order Confirmation
 
-![Checkout](content/images/order-confirmation.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px;" -->
+![Checkout](content/images/order-confirmation.png)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
 
 Notes:
 Order confirmation page
@@ -85,7 +85,7 @@ Notes:
 <pre><code data-noescape>&lt;Route path="/" component={App}&gt;
 
   <span class="fragment" data-fragment-index="0">&lt;Route path="/product/:code" component={ProductPage} /&gt;</span>
-  <span class="fragment" data-fragment-index="1">&lt;Route path="/store-locator" component={CheckoutPage} /&gt;</span>
+  <span class="fragment" data-fragment-index="1">&lt;Route path="/store-locator" component={StoreLocator} /&gt;</span>
   <span class="fragment" data-fragment-index="1">...</span>
   <span class="fragment" data-fragment-index="2">&lt;Route path="/checkout" component={CheckoutPage} /&gt;</span>
   <span class="fragment" data-fragment-index="2">...</span>
@@ -111,7 +111,7 @@ Notes:
   All the fixed components can render immediately...
 </p>
 
-<p class="fragment" data-fragment-index="2">
+<p class="fragment" data-fragment-index="1">
   ... and then we render the Policy CMS modules.
 </p>
 
@@ -119,7 +119,7 @@ Notes:
 function CheckoutPage(props) {
   <span class="fragment" data-fragment-index="0">const {
     cartDetailsProps,
-    <span class="fragment" data-fragment-index="3">policyCmsModules,</span>
+    <span class="fragment" data-fragment-index="1">policyCmsModules,</span>
   } = props;</span>
   ...
   return (
@@ -130,7 +130,8 @@ function CheckoutPage(props) {
       &lt;ShippingStep /&gt;
       &lt;PaymentStep /&gt;
       &lt;ReviewStep /&gt;
-      <span class="fragment" data-fragment-index="3">&lt;PolicyDetails contentModules={ policyCmsModules } /&gt;</span>
+
+      <span class="fragment" data-fragment-index="1">&lt;PolicyDetails contentModules={ policyCmsModules } /&gt;</span>
     </span>
     &lt;/div&gt;
   )
@@ -189,8 +190,7 @@ Notes:
   &lt;UserDetailsStep /&gt;
   &lt;ShippingStep /&gt;
   &lt;PaymentStep /&gt;
-  &lt;ReviewStep /&gt;
-</span>
+  &lt;ReviewStep /&gt;</span>
 <span class="fragment" data-fragment-index="1">
   &lt;PolicyDetails&gt; 
     &lt;Accordion&gt;
@@ -209,4 +209,5 @@ Notes:
 - Dynamic content can be built into any fixed page<!-- .element: class="fragment" -->
 - Unlike custom pages, we generally do not wait<!-- .element: class="fragment" -->
 - Fixed content takes priority<!-- .element: class="fragment" -->
+- If CMS data fails, customers can still buy shoes<!-- .element: class="fragment" -->
 - React + redux allow us to redraw when we get CMS data<!-- .element: class="fragment" -->

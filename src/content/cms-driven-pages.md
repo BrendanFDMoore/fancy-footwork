@@ -4,7 +4,7 @@
 
 ## Homepage
 
-![Homepage](content/images/home.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px;" -->
+![Homepage](content/images/home.png)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
 
 Notes:
 - Homepage for US Englsh
@@ -14,7 +14,7 @@ Notes:
 
 ## Trending Handbags
 
-![Trending Handbags](content/images/plp.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px;" -->
+![Trending Handbags](content/images/plp.png)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
 
 Notes:
 Product grid pages
@@ -23,7 +23,7 @@ Product grid pages
 
 ## Landing page for **/Women**
 
-![Women's shoes](content/images/women.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px;" -->
+![Women's shoes](content/images/women.png)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
 
 Notes:
 Gender landing pages
