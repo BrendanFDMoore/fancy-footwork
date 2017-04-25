@@ -204,10 +204,47 @@ Notes:
 
 ---
 
+## Redux store as local cache
+
+```
+{ 
+  "/":{  
+    "content-uuid-04":{  
+      "content-modules":[ { "type": "top-story", ... },
+                          { "type": "social-grid", ... },
+                          { "type": "track-order-control", ... } ]
+    }
+  },
+  "/women":{  
+    "content-uuid-24":{  
+      "content-modules":[ { "type": "top-story", ... },
+                          { "type": "main-story", ... },
+                          { "type": "highlight-list", ... },
+                          { "type": "category-grid", ... } ]
+    }
+  },
+  "/men/footwear/sneakers":{ ... },
+  "/checkout":{  
+    "content-uuid-59":{  
+      "content-modules":[ { "type" : "accordion", ... } ]
+    }
+  },
+  "/women/footwear/sneakers":{ ... }
+}
+```
+
+Notes:
+We check here first before issuing a network request
+Browsing to a previously page should load CMS modules instantly
+Better UX & reduces load on Aldo servers
+
+---
+
 ## Summary
 
 - Dynamic content can be built into any fixed page<!-- .element: class="fragment" -->
 - Unlike custom pages, we generally do not wait<!-- .element: class="fragment" -->
 - Fixed content takes priority<!-- .element: class="fragment" -->
+- Only fetch CMS data for new paths<!-- .element: class="fragment" -->
 - If CMS data fails, customers can still buy shoes<!-- .element: class="fragment" -->
 - React + redux allow us to redraw when we get CMS data<!-- .element: class="fragment" -->
