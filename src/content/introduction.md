@@ -6,7 +6,9 @@
 
 ---
 
-## Introductions
+## Quick Overview
 
-- Brendan Moore
-- Sarah Mogin
+- Who are we
+- What were we trying to do
+- How did we do it
+- How did React + Redux help us get there

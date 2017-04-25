@@ -1,22 +1,29 @@
-## CMS-driven pages
+# CMS-driven custom pages
 
 ---
 
-![Women's shoes](content/images/home.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px;" -->
+## Homepage
+
+![Homepage](content/images/home.png)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
 
 Notes:
-Homepage
+- Homepage for US Englsh
+- Customizable per locale, we will use to US English locale today
 
 ---
 
-![Women's shoes](content/images/plp.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px;" -->
+## Trending Handbags
+
+![Trending Handbags](content/images/plp.png)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
 
 Notes:
 Product grid pages
 
 ---
 
-![Women's shoes](content/images/women.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px;" -->
+## Landing page for **/Women**
+
+![Women's shoes](content/images/women.png)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
 
 Notes:
 Gender landing pages
@@ -129,9 +136,9 @@ Notes:
   "content-uuid-01": {
     "content-modules": {
       "uuid-01": { "type": "top-story", ... },
-      "uuid-01": { "type": "main-story", ... },
-      "uuid-01": { "type": "get-inspired", ... },
-      "uuid-01": { "type": "track-order", ... },
+      "uuid-02": { "type": "main-story", ... },
+      "uuid-03": { "type": "get-inspired", ... },
+      "uuid-04": { "type": "track-order", ... },
     }
   }
 }
