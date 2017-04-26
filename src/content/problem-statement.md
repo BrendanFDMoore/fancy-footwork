@@ -1,11 +1,8 @@
-
-## Goals
-
-- Flexible page layouts <!-- .element: class="fragment" -->
-- No front-end deployments <!-- .element: class="fragment" -->
-- Localized content <!-- .element: class="fragment" -->
-- Consistent design <!-- .element: class="fragment" -->
-- Fast! <!-- .element: class="fragment" -->
+<div style="background: yellow; color: black">
+ASSET NEEDED
+<br>
+Video showcasing Aldo CMS pages (homepage, grid pages, gender landing pages, category pages)
+</div>
 
 Notes:
 - Flexible page layouts - mix and match a range of content modules to suit different promotions and types of content

@@ -197,8 +197,8 @@ Notes:
 <div style="background: yellow; color: black">
 ASSET NEEDED
 <br>
-Video of flipping through TopStory slides and clicking on a featured product to get to its product page
-(Let's keep it simple and not show any TopStory modules with video)
+This asset should stress the importance of responsive images.
+We could either show Aldo assets at a different size, or pictures of the website on different devices.
 </div>
 
 Notes:
@@ -241,6 +241,7 @@ Notes:
 Notes:
 - The CMS gives us a list of the available dimensions for each image, plus a URL with wildcard for each dimension set.
 - We plug this data into an image and use the library lazysizes to determine the width of the current image, so we always load the smaller possible image.
+- This allows us to harness the HTML5 native image element, which will find the smallest image for a given size, without having to hardcode sizes - `lazysizes` will dynamically set the size after the component is rendered.
 
 ---
 
@@ -252,6 +253,7 @@ Two product tiles: One regular, one on sale
 </div>
 
 Notes:
+- Most of our CMS modules are designed to lead people to
 
 ---
 
@@ -355,10 +357,6 @@ Notes:
 
 ---
 
-## Summary
-
-- Infinite arbitrary pages<!-- .element: class="fragment" -->
-- No deployment<!-- .element: class="fragment" -->
-- Localized<!-- .element: class="fragment" -->
-- Responsive images<!-- .element: class="fragment" -->
-- Up-to-date product data<!-- .element: class="fragment" -->
+<div style="background: yellow; color: black">
+Repeat asset of scrolling down women's page
+</div>
