@@ -1,10 +1,9 @@
-<!-- .slide: data-background="../content/images/women-landing.gif" -->
-
 <div style="background: yellow; color: black">
 ASSET NEEDED
 <br>
 Video showcasing Aldo CMS pages (homepage, grid pages, gender landing pages, category pages)
 </div>
+![Women](content/images/women-landing.gif)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
 
 Notes:
 - Flexible page layouts - mix and match a range of content modules to suit different promotions and types of content

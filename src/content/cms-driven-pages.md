@@ -6,6 +6,7 @@ ASSET NEEDED
 <br>
 Video of scrolling down women's page
 </div>
+![Women](content/images/women-landing.gif)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
 
 Notes:
 - Let's just jump right in and tell you a story - what happens when you go to aldoshoes.com/women?
@@ -136,6 +137,7 @@ ASSET NEEDED
 <br>
 Video of various CMS components: Top Story, Main Story, Get Inspired
 </div>
+![CMS Components](content/images/women-landing.gif)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
 
 Notes:
 - Aldo wanted a flexible, modular layout with the ability to mix and match components per page
@@ -184,6 +186,7 @@ ASSET NEEDED
 Video of flipping through TopStory slides and clicking on a featured product to get to its product page
 (Let's keep it simple and not show any TopStory modules with video)
 </div>
+![TopStory](content/images/women-landing.gif)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
 
 Notes:
 - It's a carousel (joke about how designers love carousels)
@@ -201,6 +204,7 @@ ASSET NEEDED
 This asset should stress the importance of responsive images.
 We could either show Aldo assets at a different size, or pictures of the website on different devices.
 </div>
+![Women](content/images/women-landing.gif)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
 
 Notes:
 - Let's start with the assets. Assets are a big deal to Aldo, because they allow us to showcase a product and its available accessories, but with a large mobile user base, we needed to always load the smallest possible asset.
@@ -252,6 +256,7 @@ ASSET NEEDED
 <br>
 Two product tiles: One regular, one on sale
 </div>
+![Product Tiles](content/images/women-landing.gif)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
 
 Notes:
 - Most of our CMS modules are designed to lead people to product pages
@@ -361,3 +366,4 @@ Notes:
 <div style="background: yellow; color: black">
 Repeat asset of scrolling down women's page
 </div>
+![Women](content/images/women-landing.gif)<!-- .element: style="max-height: 70%; max-width: 70%;" -->

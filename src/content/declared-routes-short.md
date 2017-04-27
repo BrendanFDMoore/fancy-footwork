@@ -6,6 +6,7 @@ One or more images to showcase:<br>
 - Return landing page content<br>
 - Confirmation page fine print
 </div>
+![Women](content/images/women-landing.gif)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
 
 Notes:
 - Legal policies can change at a moment's notice - this allows for instance updates
