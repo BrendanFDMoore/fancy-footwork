@@ -1,36 +1,15 @@
-# CMS-driven custom pages
-
----
-
-## Homepage
-
-![Homepage](content/images/home.png)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
-
-Notes:
-- Homepage for US Englsh
-- Customizable per locale, we will use to US English locale today
-
----
-
-## Trending Handbags
-
-![Trending Handbags](content/images/plp.png)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
-
-Notes:
-Product grid pages
-
----
-
-## Landing page for **/Women**
-
-![Women's shoes](content/images/women.png)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
-
-Notes:
-Gender landing pages
-
----
 
 ## What happens when you go to **aldoshoes.com/us/en_US/women**?
+
+<div style="background: yellow; color: black">
+ASSET NEEDED
+<br>
+Video of scrolling down women's page
+</div>
+![Women](content/images/women-landing.gif)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
+
+Notes:
+- Let's just jump right in and tell you a story - what happens when you go to aldoshoes.com/women?
 
 ---
 
@@ -44,12 +23,11 @@ Get JSON back:<!-- .element: class="fragment" data-fragment-index="1" -->
 
 ```js
 {
-  "content-uuid-01": {
+  "uuid-00": {
     "content-modules": {
       "uuid-01": { ... },
       "uuid-02": { ... },
-      "uuid-03": { ... },
-      "uuid-04": { ... }
+      "uuid-03": { ... }
     }
   }
 }
@@ -57,9 +35,33 @@ Get JSON back:<!-- .element: class="fragment" data-fragment-index="1" -->
 <!-- .element: class="fragment" data-fragment-index="1" -->
 
 Notes:
-- Request CMS data on route change
-- Get list of content modules
-- For now, just keep track of the fact we got a response
+- On a route change, we request CMS data for the new path 
+- Get content modules data back as JSON
+
+---
+
+## Step 1: Fetch CMS data (cont'd)
+
+<p class="fragment" data-fragment-index="0">
+  Cache in redux store keyed on the path
+</p>
+
+<pre><code data-noescape>{
+  cms: {
+    "/checkout": { ... },
+    "/men/footwear/sneakers": { ... },
+    <span class="fragment" data-fragment-index="0">"/women":{  
+      "content-uuid-24": {  
+        "content-modules": [ ... ]
+      }
+    }</span>
+  }
+}</code></pre>
+
+Notes:
+- We check the redux store first before issuing a network request
+- Browsing to a previously visited page should load CMS modules immediately
+- This enables a better user experience & reduces the load on Aldo's infrastructure
 
 ---
 
@@ -76,7 +78,8 @@ Notes:
 <pre><code data-noescape>&lt;Route path="/" component={App}&gt;
 
   <span class="fragment" data-fragment-index="0">&lt;Route path="/product/:code" component={ProductPage} /&gt;
-  &lt;Route path="/checkout" component={CheckoutPage} /&gt;</span>
+  &lt;Route path="/checkout" component={CheckoutPage} /&gt;
+  ...</span>
 
   <span class="fragment" data-fragment-index="1">&lt;Route path="&#42" component={DynamicPage} /&gt;</span>
 
@@ -84,9 +87,10 @@ Notes:
 </code></pre>
 
 Notes:
-- Check declared routes
-- We don't have many routes because we have so many CMS pages
-- `/women` doesn't match, so render the `<DynamicPage />` component
+- Check routes we've defined for `react-redux-router`
+- This evaluates the path against all our "fixed" pages like Products, Checkout, or the Store Locator
+- We don't have very many routes here because we have so many custom CMS pages
+- `/women` doesn't match any known routes, so it gets caught by the wildcard and we render the `<DynamicPage />` component
 
 ---
 
@@ -128,17 +132,30 @@ Notes:
 
 ## Step 4: Map CMS modules to React components
 
+<div style="background: yellow; color: black">
+ASSET NEEDED
+<br>
+Video of various CMS components: Top Story, Main Story, Get Inspired
+</div>
+![CMS Components](content/images/women-landing.gif)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
+
+Notes:
+- Aldo wanted a flexible, modular layout with the ability to mix and match components per page
+
+---
+
+## Step 4: Map CMS modules to React components (cont'd)
+
 <p class="fragment" data-fragment-index="0">
   Turn CMS data...
 </p>
 
 <pre class="fragment" data-fragment-index="0"><code data-noescape>{
-  "content-uuid-01": {
+  "uuid-00": {
     "content-modules": {
       "uuid-01": { "type": "top-story", ... },
       "uuid-02": { "type": "main-story", ... },
       "uuid-03": { "type": "get-inspired", ... },
-      "uuid-04": { "type": "track-order", ... },
     }
   }
 }
@@ -152,23 +169,49 @@ Notes:
 <TopStory />
 <MainStory />
 <GetInspired />
-<TrackOrder />
 ```
 <!-- .element: class="fragment" data-fragment-index="1"-->
 
+Notes:
+- Each CMS module has a type. We map that type to a React component.
+- React's component-based architecture is a great fit for our modular CMS design.
+
 ---
 
-![Women's shoes](content/images/top-story.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px;" -->
+## Step 4: Build CMS components: `<TopStory />`
+
+<div style="background: yellow; color: black">
+ASSET NEEDED
+<br>
+Video of flipping through TopStory slides and clicking on a featured product to get to its product page
+(Let's keep it simple and not show any TopStory modules with video)
+</div>
+![TopStory](content/images/women-landing.gif)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
 
 Notes:
-- Some features to highlight...
-- Title and description
-- Front and back images
+- It's a carousel (joke about how designers love carousels)
+- Title, description, call to action button
+- Front and back assets
 - Products with prices (need to be up to date)
 
 ---
 
 ### `<TopStory />` Step 1: Configure assets
+
+<div style="background: yellow; color: black">
+ASSET NEEDED
+<br>
+This asset should stress the importance of responsive images.
+We could either show Aldo assets at a different size, or pictures of the website on different devices.
+</div>
+![Women](content/images/women-landing.gif)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
+
+Notes:
+- Let's start with the assets. Assets are a big deal to Aldo, because they allow us to showcase a product and its available accessories, but with a large mobile user base, we needed to always load the smallest possible asset.
+
+---
+
+### `<TopStory />` Step 1: Configure assets (cont'd)
 
 <p class="fragment" data-fragment-index="0">
   Turn CMS image props...
@@ -200,9 +243,27 @@ Notes:
 ```
 <!-- .element: class="fragment" data-fragment-index="1"-->
 
+Notes:
+- The CMS gives us a list of the available dimensions for each image, plus a URL with wildcard for each dimension set.
+- We plug this data into an image and use the library `lazysizes` to determine the width of the current image, so we always load the smallest possible image.
+- This allows us to harness the HTML5 native image element, which will find the smallest image for a given size, without having to hardcode sizes - `lazysizes` will dynamically set the size after the component is rendered.
+
 ---
 
 ### `<TopStory />` Step 2: Fetch product data
+<div style="background: yellow; color: black">
+ASSET NEEDED
+<br>
+Two product tiles: One regular, one on sale
+</div>
+![Product Tiles](content/images/women-landing.gif)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
+
+Notes:
+- Most of our CMS modules are designed to lead people to product pages
+
+---
+
+### `<TopStory />` Step 2: Fetch product data (cont'd)
 
 <p class="fragment" data-fragment-index="0">
   Get product IDs
@@ -302,10 +363,7 @@ Notes:
 
 ---
 
-## Summary
-
-- Infinite arbitrary pages<!-- .element: class="fragment" -->
-- No deployment<!-- .element: class="fragment" -->
-- Localized<!-- .element: class="fragment" -->
-- Responsive images<!-- .element: class="fragment" -->
-- Up-to-date product data<!-- .element: class="fragment" -->
+<div style="background: yellow; color: black">
+Repeat asset of scrolling down women's page
+</div>
+![Women](content/images/women-landing.gif)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
