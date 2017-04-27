@@ -22,12 +22,11 @@ Get JSON back:<!-- .element: class="fragment" data-fragment-index="1" -->
 
 ```js
 {
-  "content-uuid-01": {
+  "uuid-00": {
     "content-modules": {
       "uuid-01": { ... },
       "uuid-02": { ... },
-      "uuid-03": { ... },
-      "uuid-04": { ... }
+      "uuid-03": { ... }
     }
   }
 }
@@ -35,33 +34,33 @@ Get JSON back:<!-- .element: class="fragment" data-fragment-index="1" -->
 <!-- .element: class="fragment" data-fragment-index="1" -->
 
 Notes:
-- Request CMS data on route change
-- Get list of content modules
+- On a route change, we request CMS data for the new path 
+- Get content modules data back as JSON
 
 ---
 
 ## Step 1: Fetch CMS data (cont'd)
 
 <p class="fragment" data-fragment-index="0">
-  Cache in redux
+  Cache in redux store keyed on the path
 </p>
 
 <pre><code data-noescape>{
   cms: {
+    "/checkout": { ... },
+    "/men/footwear/sneakers": { ... },
     <span class="fragment" data-fragment-index="0">"/women":{  
       "content-uuid-24": {  
         "content-modules": [ ... ]
       }
-    },</span>
-    "/men/footwear/sneakers": { ... },
-    "/checkout": { ... }
+    }</span>
   }
 }</code></pre>
 
 Notes:
-- We check here first before issuing a network request
-- Browsing to a previously page should load CMS modules instantly
-- Better UX & reduces load on Aldo servers
+- We check the redux store first before issuing a network request
+- Browsing to a previously visited page should load CMS modules immediately
+- This enables a better user experience & reduces the load on Aldo's infrastructure
 
 ---
 
@@ -78,7 +77,8 @@ Notes:
 <pre><code data-noescape>&lt;Route path="/" component={App}&gt;
 
   <span class="fragment" data-fragment-index="0">&lt;Route path="/product/:code" component={ProductPage} /&gt;
-  &lt;Route path="/checkout" component={CheckoutPage} /&gt;</span>
+  &lt;Route path="/checkout" component={CheckoutPage} /&gt;
+  ...</span>
 
   <span class="fragment" data-fragment-index="1">&lt;Route path="&#42" component={DynamicPage} /&gt;</span>
 
@@ -86,9 +86,10 @@ Notes:
 </code></pre>
 
 Notes:
-- Check declared routes
-- We don't have many routes because we have so many CMS pages
-- `/women` doesn't match, so render the `<DynamicPage />` component
+- Check routes we've defined for `react-redux-router`
+- This evaluates the path against all our "fixed" pages like Products, Checkout, or the Store Locator
+- We don't have very many routes here because we have so many custom CMS pages
+- `/women` doesn't match any known routes, so it gets caught by the wildcard and we render the `<DynamicPage />` component
 
 ---
 
@@ -148,7 +149,7 @@ Notes:
 </p>
 
 <pre class="fragment" data-fragment-index="0"><code data-noescape>{
-  "content-uuid-01": {
+  "uuid-00": {
     "content-modules": {
       "uuid-01": { "type": "top-story", ... },
       "uuid-02": { "type": "main-story", ... },
@@ -240,7 +241,7 @@ Notes:
 
 Notes:
 - The CMS gives us a list of the available dimensions for each image, plus a URL with wildcard for each dimension set.
-- We plug this data into an image and use the library lazysizes to determine the width of the current image, so we always load the smaller possible image.
+- We plug this data into an image and use the library `lazysizes` to determine the width of the current image, so we always load the smallest possible image.
 - This allows us to harness the HTML5 native image element, which will find the smallest image for a given size, without having to hardcode sizes - `lazysizes` will dynamically set the size after the component is rendered.
 
 ---
@@ -253,7 +254,7 @@ Two product tiles: One regular, one on sale
 </div>
 
 Notes:
-- Most of our CMS modules are designed to lead people to
+- Most of our CMS modules are designed to lead people to product pages
 
 ---
 
