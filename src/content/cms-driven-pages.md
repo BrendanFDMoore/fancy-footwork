@@ -1,15 +1,12 @@
+![Home](content/images/home.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
 
-## What happens when you go to **aldoshoes.com/us/en_US/women**?
+---
 
-<div style="background: yellow; color: black">
-ASSET NEEDED
-<br>
-Video of scrolling down women's page
-</div>
-![Women](content/images/women-landing.gif)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
+![Women](content/images/women.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
 
-Notes:
-- Let's just jump right in and tell you a story - what happens when you go to aldoshoes.com/women?
+---
+
+![PLP](content/images/plp.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
 
 ---
 
@@ -35,7 +32,7 @@ Get JSON back:<!-- .element: class="fragment" data-fragment-index="1" -->
 <!-- .element: class="fragment" data-fragment-index="1" -->
 
 Notes:
-- On a route change, we request CMS data for the new path 
+- On a route change, we request CMS data for the new path
 - Get content modules data back as JSON
 
 ---
@@ -178,21 +175,58 @@ Notes:
 
 ---
 
-## Step 4: Build CMS components: `<TopStory />`
+![Unclosed divs](content/images/girl-shaking-fist.gif)<!-- .element: style="height: 80vh; max-width: 70%; margin-top: -18px; box-shadow: none" -->
 
-<div style="background: yellow; color: black">
-ASSET NEEDED
-<br>
-Video of flipping through TopStory slides and clicking on a featured product to get to its product page
-(Let's keep it simple and not show any TopStory modules with video)
+---
+
+<p class="fragment" data-fragment-index="0">
+  Map CMS properties...
+</p>
+
+<pre class="fragment" data-fragment-index="0"><code data-noescape>{
+  "title": "Pretty in pastel",
+  "featured-products": {
+    "featured-product-0": { "id": "123" },
+    "featured-product-1": { "id": "456" }
+  }
+}
+</code></pre>
+
+<p class="fragment" data-fragment-index="1">
+  ...to React component props
+</p>
+
+```
+<h2>Pretty in pastel</h2>
+
+<div className='my-cms-modules__products'>
+  <ProductTile name="Stessy" url="/product/123" price="$100" />
+  <ProductTile name="Nika" url="/product/456" price="$50" />
 </div>
-![TopStory](content/images/women-landing.gif)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
+```
+<!-- .element: class="fragment" data-fragment-index="1"-->
 
-Notes:
-- It's a carousel (joke about how designers love carousels)
-- Title, description, call to action button
-- Front and back assets
-- Products with prices (need to be up to date)
+---
+
+![track-order](content/images/track-order.png)
+
+---
+
+![more-from-collection](content/images/more-from-collection.png)<!-- .element: style="max-height: 90%; max-width: 90%; margin-top: -18px; box-shadow: none" -->
+
+---
+
+[checkout policy goes here]
+
+---
+
+<div style="font-size: 172px; color: black">
+   💪
+</div>
+
+---
+
+![viewports](content/images/viewports.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
 
 ---
 
@@ -247,90 +281,6 @@ Notes:
 - The CMS gives us a list of the available dimensions for each image, plus a URL with wildcard for each dimension set.
 - We plug this data into an image and use the library `lazysizes` to determine the width of the current image, so we always load the smallest possible image.
 - This allows us to harness the HTML5 native image element, which will find the smallest image for a given size, without having to hardcode sizes - `lazysizes` will dynamically set the size after the component is rendered.
-
----
-
-### `<TopStory />` Step 2: Fetch product data
-<div style="background: yellow; color: black">
-ASSET NEEDED
-<br>
-Two product tiles: One regular, one on sale
-</div>
-![Product Tiles](content/images/women-landing.gif)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
-
-Notes:
-- Most of our CMS modules are designed to lead people to product pages
-
----
-
-### `<TopStory />` Step 2: Fetch product data (cont'd)
-
-<p class="fragment" data-fragment-index="0">
-  Get product IDs
-</p>
-
-```js
-{
-  "featured-products": {
-    "featured-product-0": { "id": "123" },
-    "featured-product-1": { "id": "456" }
-  }
-}
-```
-<!-- .element: class="fragment" data-fragment-index="0"-->
-
-<p class="fragment" data-fragment-index="1">
-  Get details from <code data-noescape>api/product-details?codes=**123**,**456**</code>
-</ProductTile>
-
-<p class="fragment" data-fragment-index="2">
-  Render `<ProductTile />` components
-</ProductTile>
-
-```
-<ProductTile
-  name="Stessy"
-  url="/product/123"
-  price="$100"
-  salePrice="$50" />
-
-<ProductTile
-  name="Nika"
-  url="/product/456"
-  price="$20" />
-```
-<!-- .element: class="fragment" data-fragment-index="2"-->
-
----
-
-### `<TopStory />` Step 3: Render `<TopStory />` component
-
-<p class="fragment" data-fragment-index="0">
-  Render assets
-</p>
-
-<p class="fragment" data-fragment-index="1">
-  Render products
-</p>
-
-<p class="fragment" data-fragment-index="2">
-  Map properties
-</p>
-
-<pre><code data-noescape>&lt;div className="top-story"&gt;
-  &lt;div className="top-story__slide"&gt;
-
-    <span class="fragment" data-fragment-index="2">&lt;h2&gt;{title}&lt;/h2&gt;</span>
-    <span class="fragment" data-fragment-index="2">&lt;p&gt;{content}&lt;/p&gt;</span>
-    <span class="fragment" data-fragment-index="2">&lt;Link to="ctaLink"&gt;{ctaTitle}&lt;/Link&gt;</span>
-
-    <span class="fragment" data-fragment-index="0">&lt;Img {...imageProps} /&gt;</span>
-
-    <span class="fragment" data-fragment-index="1">&lt;FeaturedProducts {...featuredProductProps} /&gt;</span>
-
-  &lt;/div&gt;
-  &lt;div className="top-story__slide"&gt;...&lt;/div&gt;
-&lt;/div&gt;</code></pre>
 
 ---
 
