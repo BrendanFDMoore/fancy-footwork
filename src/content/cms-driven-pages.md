@@ -313,7 +313,10 @@ Notes:
 
 ---
 
-<div style="background: yellow; color: black">
-Repeat asset of scrolling down women's page
+<div style="font-size: 172px; color: black">
+   🎉
 </div>
-![Women](content/images/women-landing.gif)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
+
+---
+
+![Stessy](content/images/stessy.gif)<!-- .element: style="box-shadow: none" -->
