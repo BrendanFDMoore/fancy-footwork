@@ -35,38 +35,26 @@
 }</span></code></pre>
 <!-- .element: class="fragment" data-fragment-index="1" -->
 
-
 Notes:
 - On a route change, we request CMS data for the new path 
 - Get content modules data back as JSON
 
 ---
 
-<p class="fragment" data-fragment-index="0">
-  Transform CMS data...
-</p>
-
-<pre class="fragment" data-fragment-index="0"><code data-noescape>{
-  "uuid-00": {
-    "content-modules": {
-      "uuid-01": { "type": "top-story", ... },
-      "uuid-02": { "type": "main-story", ... },
-      "uuid-03": { "type": "highlights", ... },
-    }
+Transform CMS data...
+<pre class="fragment" data-fragment-index="0"><code data-noescape>"uuid-00": {
+  "content-modules": {
+    "uuid-01": { "type": "top-story", ... },
+    "uuid-02": { "type": "main-story", ... },
+    "uuid-03": { "type": "highlights", ... },
   }
-}
-</code></pre>
-<p class="fragment" data-fragment-index="1" style="text-align:center;">
-  ![Checkout](content/images/transmogrify.png)<!-- .element: style="max-height: 10%; max-width: 30%;" -->
-</p>
-<p class="fragment" data-fragment-index="2">
-  ...to React components
-</p>
-```
-<TopStory />
-<MainStory />
-<Highlights />
-```
+}</code></pre>
+<div class="fragment" data-fragment-index="1" style="text-align:center;margin-top:-10px;margin-bottom:0px;">
+<img style="border:none;margin:0;box-shadow: none;max-height: 10%; max-width: 30%;" data-src="content/images/transmogrify.png" alt="Transmogrify!"></div>
+<p class="fragment" data-fragment-index="2" style="margin-top:-20px;">...into React components</p>
+<pre class="fragment" data-fragment-index="2"><code data-noescape>&lt;TopStory /&gt;
+&lt;MainStory /&gt;
+&lt;Highlights /&gt;</code></pre>
 <!-- .element: class="fragment" data-fragment-index="2"-->
 
 ---
@@ -75,26 +63,19 @@ Notes:
 
 ---
 
-<p class="fragment" data-fragment-index="0">
-  Map CMS properties...
-</p>
-
+<p>Map CMS properties...</p>
 <pre class="fragment" data-fragment-index="0"><code data-noescape>{
   "title": "Pretty in pastel",
   "featured-products": {
     "featured-product-0": { "id": "123" },
     "featured-product-1": { "id": "456" }
   }
-}
-</code></pre>
-
+}</code></pre>
 <p class="fragment" data-fragment-index="1">
   ...to React component props
 </p>
-
 ```
 <h2>Pretty in pastel</h2>
-
 <div className='my-cms-modules__products'>
   <ProductTile name="Stessy" url="/product/123" price="$100" />
   <ProductTile name="Nika" url="/product/456" price="$50" />
@@ -108,22 +89,28 @@ Notes:
 
 ---
 
-<pre><code data-noescape>&lt;Route path="/" component={App}&gt;
-  &lt;Route path="/product/:code" component={ProductPage} /&gt;
-  &lt;Route path="/checkout" component={CheckoutPage} /&gt;
-  ...
-  <span style="font-weight:bold;">
-  &lt;Route path="&#42" component={CustomPage} /&gt;
-  </span>
+<pre style="font-size:0.9em;"><code data-noescape>&lt;Route
+  path="/"
+  component={App}&gt;
+    &lt;Route
+      path="/product/:code"
+      component={ProductPage} /&gt;
+    &lt;Route
+      path="/checkout"
+      component={CheckoutPage} /&gt;
+    ...<span style="font-weight:bold;">
+    &lt;Route
+      path="&#42"
+      component={CustomPage} /&gt;</span>
 &lt;/Route&gt;
 </code></pre>
 
 ---
 <!-- .element: data-transition="fade-in fade-out"-->
-<div class="fragment" data-fragment-index="0" style="text-align:center;margin:0;border:1px solid #fff">
-<img style="border:none;margin:0;box-shadow: none;" data-src="content/images/women-landing-header.png" alt="Header"><!-- .element: class="fragment" data-fragment-index="0"-->
-<img style="border:none;margin:0;box-shadow: none;" data-src="content/images/loading2.gif" alt="Loading"><!-- .element: class="fragment" data-fragment-index="1"-->
-<img style="border:none;margin:0;box-shadow: none;" data-src="content/images/women-landing-footer.png" alt="Footer"><!-- .element: class="fragment" data-fragment-index="2"-->
+<div style="text-align:center;margin:0;border:1px solid #fff">
+<img style="border:none;margin:0;box-shadow: none;" data-src="content/images/women-landing-header.png" alt="Header">
+<img style="border:none;margin:0;box-shadow: none;margin-top:40px;margin-bottom:40px;" data-src="content/images/loading2.gif" alt="Loading"><!-- .element: class="fragment" data-fragment-index="2"-->
+<img style="border:none;margin:0;box-shadow: none;" data-src="content/images/women-landing-footer.png" alt="Footer"><!-- .element: class="fragment" data-fragment-index="1"-->
 </div>
 
 ---
@@ -138,7 +125,7 @@ Notes:
 <!-- .element: data-transition="fade-in fade-out"-->
 <div style="text-align:center;margin:0;border:1px solid #fff">
 <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/women-landing-header.png" alt="Header">
-<img style="border:none;margin:0;box-shadow: none;" data-src="content/images/loading2.gif" alt="Loading">
+<img style="border:none;margin:0;box-shadow: none;margin-top:40px;margin-bottom:40px;" data-src="content/images/loading2.gif" alt="Loading">
 <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/women-landing-footer.png" alt="Footer">
 </div>
 
@@ -160,7 +147,7 @@ Notes:
 
 ---
 
-<div style="font-size: 126px; color: black; text-align: center; margin-top:50px;">
+<div style="font-size: 126px; color: black; text-align: center; margin-top:100px;">
    💪
 </div>
 
@@ -172,12 +159,9 @@ Notes:
 
 ---
 
-<p class="fragment" data-fragment-index="0">
-  Turn CMS image props...
-</p>
+<p>Turn CMS image props...</p>
 
 ```js
-{
   "image-asset": {
     "dimensions": [
       { "h": "400", "w": "400" },
@@ -185,7 +169,6 @@ Notes:
     ],
     "url": "//media.aldoshoes.com/assets/shoename__[dimension].jpg"
   }
-}
 ```
 <!-- .element: class="fragment" data-fragment-index="0"-->
 
@@ -211,25 +194,25 @@ Notes:
 
 ---
 
-<div style="text-align:center;margin:0;margin-top:50px;">
+<div style="text-align:center;margin:0;margin-top:100px;">
 <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-table.png" alt="Table">
 </div>
 
 ---
 
-<div style="text-align:center;margin:0;margin-top:50px;">
+<div style="text-align:center;margin:0;margin-top:100px;">
 <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-timeline.png" alt="Timeline">
 </div>
 
 ---
 
-<div style="text-align:center;margin:0;margin-top:50px;">
+<div style="text-align:center;margin:0;margin-top:100px;">
 <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-list-paragraph.png" alt="List with paragraphs">
 </div>
 
 ---
 
-<div style="text-align:center;margin:0;margin-top:50px;">
+<div style="text-align:center;margin:0;margin-top:100px;">
 <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-list-bold-header.png" alt="List with bold header">
 </div>
 
@@ -245,14 +228,12 @@ Notes:
 <div style="text-align:center;margin:0;">
 <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-table.png" alt="Table">
 </div>
-<pre><code data-noescape style="font-size:0.8em;">
-&#96;&#96;&#96;
+<pre><code data-noescape class="markdown" style="font-size:0.8em;color:#000;">
 Shipping Method                         | Delivery Time      | Cost
 --------------------------------------- | ------------------ | ----
 &#91;Standard Shipping&#93;&#40;http://google.com &#41; | 5-7 business days  | $10
 &#42;Express Shipping&#42;                      | 7-12 business days | $5
 Ship to an ALDO Store                   | 7-12 business days | Free
-&#96;&#96;&#96;
 </code></pre>
 <!-- .element: class="fragment" data-fragment-index="0"-->
 
@@ -261,12 +242,10 @@ Ship to an ALDO Store                   | 7-12 business days | Free
 <div style="text-align:center;margin:0;">
 <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-timeline.png" alt="Timeline">
 </div>
-<pre><code data-noescape>&#96;&#96;&#96;
-&gt; 1. Order placed
+<pre><code data-noescape class="markdown" style="font-size:0.8em;color:#000;">&gt; 1. Order placed
 &gt; 2. Order processed long title
 &gt; 3. Shipped
-&gt; 4. Received other long title
-&#96;&#96;&#96;</code></pre>
+&gt; 4. Received other long title</code></pre>
 <!-- .element: class="fragment" data-fragment-index="0"-->
 
 ---
@@ -274,19 +253,14 @@ Ship to an ALDO Store                   | 7-12 business days | Free
 <div style="text-align:center;margin:0;">
 <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-list-paragraph.png" alt="List with paragraphs">
 </div>
-<pre><code data-noescape style="font-size:0.8em;">&#96;&#96;&#96;
-&#49;. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-&#50;. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-&#96;&#96;&#96;</code></pre>
+<pre><code data-noescape class="markdown" style="font-size:0.8em;color:#000;">&#49;. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+&#50;. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</code></pre>
 <!-- .element: class="fragment" data-fragment-index="0"-->
 
 ---
 
-<div style="text-align:center;margin:0;">
-<img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-list-bold-header.png" alt="List with bold header">
-</div>
-<pre><code data-noescape style="font-size:0.8em;">&#96;&#96;&#96;
-&#49;. Print out a mailing label
+<div style="text-align:center;margin:0;"><img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-list-bold-header.png" alt="List with bold header"></div>
+<pre><code data-noescape class="markdown" style="font-size:0.8em;color:#000;">&#49;. Print out a mailing label
 &nbsp;
    Search for an item or browse the site.
 &#50;. Place your items for return in a box.
@@ -294,13 +268,12 @@ Ship to an ALDO Store                   | 7-12 business days | Free
    Choose the colour and size and select “Add to Bag”
 &#51;. Mail your package
 &nbsp;
-   Start the checkout process by selecting “Checkout” at your shopping bag.
-&#96;&#96;&#96;</code></pre>
+   Start the checkout process by selecting “Checkout” at your shopping bag.</code></pre>
 <!-- .element: class="fragment" data-fragment-index="0"-->
 
 ---
 
-<div style="font-size: 126px; color: black; text-align: center; margin-top:50px;">
+<div style="font-size: 126px; color: black; text-align: center; margin-top:100px;">
    🎉
 </div>
 
