@@ -98,6 +98,64 @@ Transform CMS data...
 
 ---
 
+<!-- .element: data-transition="slide-in fade-out"-->
+<pre style="font-size:0.9em;"><code data-noescape>&lt;Route
+  path="/"
+  component={App}&gt;
+    &lt;Route
+      path="/product/:code"
+      component={ProductPage} /&gt;
+    &lt;Route
+      path="/checkout"
+      component={CheckoutPage} /&gt;
+    ...
+    &lt;Route
+      path="&#42"
+      component={CustomPage} /&gt;
+&lt;/Route&gt;
+</code></pre>
+
+---
+
+<!-- .element: data-transition="fade-in fade-out"-->
+<pre style="font-size:0.9em;"><code data-noescape>&lt;Route
+  path="/"
+  component={App}&gt;
+    <span style="font-weight:bold;">&lt;Route
+      path="/product/:code"
+      component={ProductPage} /&gt;</span>
+    &lt;Route
+      path="/checkout"
+      component={CheckoutPage} /&gt;
+    ...
+    &lt;Route
+      path="&#42"
+      component={CustomPage} /&gt;
+&lt;/Route&gt;
+</code></pre>
+
+---
+
+<!-- .element: data-transition="fade-in fade-out"-->
+<pre style="font-size:0.9em;"><code data-noescape>&lt;Route
+  path="/"
+  component={App}&gt;
+    &lt;Route
+      path="/product/:code"
+      component={ProductPage} /&gt;
+    <span style="font-weight:bold;">&lt;Route
+      path="/checkout"
+      component={CheckoutPage} /&gt;</span>
+    ...
+    &lt;Route
+      path="&#42"
+      component={CustomPage} /&gt;
+&lt;/Route&gt;
+</code></pre>
+
+---
+
+<!-- .element: data-transition="fade-in slide-out"-->
 <pre style="font-size:0.9em;"><code data-noescape>&lt;Route
   path="/"
   component={App}&gt;
@@ -115,7 +173,8 @@ Transform CMS data...
 </code></pre>
 
 ---
-<!-- .element: data-transition="fade-in fade-out"-->
+
+<!-- .element: data-transition="slide-in fade-out"-->
 <div style="text-align:center;margin:0;border:1px solid #fff">
 <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/women-landing-header.png" alt="Header">
 <img style="border:none;margin:0;box-shadow: none;margin-top:40px;margin-bottom:40px;" data-src="content/images/loading2.gif" alt="Loading"><!-- .element: class="fragment" data-fragment-index="2"-->
@@ -139,7 +198,7 @@ Transform CMS data...
 </div>
 
 ---
-<!-- .element: data-transition="fade-in fade-out"-->
+<!-- .element: data-transition="fade-in slide-out"-->
 <div style="text-align:center;margin:0;border:1px solid #fff">
 <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/women-landing-header.png" alt="Header">
 <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/women-landing-404.png" alt="Body">
