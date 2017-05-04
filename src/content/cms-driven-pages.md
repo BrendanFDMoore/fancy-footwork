@@ -1,12 +1,15 @@
+## Home page
 ![Home](content/images/home.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
 
 ---
 
-![Women](content/images/women.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
+## Now Trending Handbags
+![PLP](content/images/plp.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
 
 ---
 
-![PLP](content/images/plp.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
+## Women's styles landing page
+![Women](content/images/women.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
 
 ---
 
@@ -49,13 +52,19 @@ Transform CMS data...
     "uuid-03": { "type": "highlights", ... },
   }
 }</code></pre>
-<div class="fragment" data-fragment-index="1" style="text-align:center;margin-top:-10px;margin-bottom:0px;">
-<img style="border:none;margin:0;box-shadow: none;max-height: 10%; max-width: 30%;" data-src="content/images/transmogrify.png" alt="Transmogrify!"></div>
-<p class="fragment" data-fragment-index="2" style="margin-top:-20px;">...into React components</p>
+<div>
+  <div style="left: -8.33%;text-align: center;float: left;width: 50%;z-index: -10;">
+    <img style="border:none;box-shadow: none;max-height: 85%; max-width: 85%;" data-src="content/images/transmogrify.png" alt="Transmogrify!">
+    <!-- .element: class="fragment" data-fragment-index="1"-->
+  </div>
+  <div style="left: 31.25%;top: 75px;float: right;z-index: -10;width: 50%;">
+    <p class="fragment" data-fragment-index="2" style="margin-top:20px;">...into React components</p>
 <pre class="fragment" data-fragment-index="2"><code data-noescape>&lt;TopStory /&gt;
 &lt;MainStory /&gt;
 &lt;Highlights /&gt;</code></pre>
-<!-- .element: class="fragment" data-fragment-index="2"-->
+    <!-- .element: class="fragment" data-fragment-index="2"-->
+  </div>
+</div>
 
 ---
 
