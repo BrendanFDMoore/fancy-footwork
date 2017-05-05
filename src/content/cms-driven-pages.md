@@ -211,7 +211,21 @@ Transform CMS data...
 
 ---
 
-[checkout policy goes here]
+<!-- .element: data-transition="slide-in fade-out"-->
+<img style="border:none;margin:0;box-shadow: none; max-height: 70%; max-width: 70%;  margin-top: -18px; "
+  data-src="content/images/checkout-policy-step1.png" alt="Header">
+
+---
+
+<!-- .element: data-transition="fade-in fade-out"-->
+<img style="border:none;margin:0;box-shadow: none; max-height: 70%; max-width: 70%;  margin-top: -18px; "
+  data-src="content/images/checkout-policy-step2.png" alt="Header">
+
+---
+
+<!-- .element: data-transition="fade-in slide-out"-->
+<img style="border:none;margin:0;box-shadow: none; max-height: 70%; max-width: 70%;  margin-top: -18px; "
+  data-src="content/images/checkout-policy-step3.png" alt="Header">
 
 ---
 
@@ -257,8 +271,6 @@ Notes:
 - The CMS gives us a list of the available dimensions for each image, plus a URL with wildcard for each dimension set.
 - We plug this data into an image and use the library `lazysizes` to determine the width of the current image, so we always load the smallest possible image.
 - This allows us to harness the HTML5 native image element, which will find the smallest image for a given size, without having to hardcode sizes - `lazysizes` will dynamically set the size after the component is rendered.
-
----
 
 ---
 
