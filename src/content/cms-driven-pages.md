@@ -207,7 +207,10 @@ Transform CMS data...
 
 ---
 
-![more-from-collection](content/images/more-from-collection.png)<!-- .element: style="max-height: 90%; max-width: 90%; margin-top: -18px; box-shadow: none" -->
+<div style="text-align: center;">
+   <img style="border:1px solid #aaa; margin:0; box-shadow: 10px 10px 12px 0px rgba(0,0,0,0.75); max-height: 90%; max-width: 50%;"
+  data-src="content/images/camylla-full-page-trim4.png" alt="Header">
+</div>
 
 ---
 
