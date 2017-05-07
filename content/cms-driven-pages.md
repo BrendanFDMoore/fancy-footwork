@@ -1,12 +1,15 @@
+## Home page
 ![Home](content/images/home.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
 
 ---
 
-![Women](content/images/women.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
+## Now Trending Handbags
+![PLP](content/images/plp.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
 
 ---
 
-![PLP](content/images/plp.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
+## Women's styles landing page
+![Women](content/images/women.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
 
 ---
 
@@ -49,13 +52,19 @@ Transform CMS data...
     "uuid-03": { "type": "highlights", ... },
   }
 }</code></pre>
-<div class="fragment" data-fragment-index="1" style="text-align:center;margin-top:-10px;margin-bottom:0px;">
-<img style="border:none;margin:0;box-shadow: none;max-height: 10%; max-width: 30%;" data-src="content/images/transmogrify.png" alt="Transmogrify!"></div>
-<p class="fragment" data-fragment-index="2" style="margin-top:-20px;">...into React components</p>
+<div>
+  <div style="left: -8.33%;text-align: center;float: left;width: 50%;z-index: -10;">
+    <img style="border:none;box-shadow: none;max-height: 85%; max-width: 85%;" data-src="content/images/transmogrify.png" alt="Transmogrify!">
+    <!-- .element: class="fragment" data-fragment-index="1"-->
+  </div>
+  <div style="left: 31.25%;top: 75px;float: right;z-index: -10;width: 50%;">
+    <p class="fragment" data-fragment-index="2" style="margin-top:20px;">...into React components</p>
 <pre class="fragment" data-fragment-index="2"><code data-noescape>&lt;TopStory /&gt;
 &lt;MainStory /&gt;
 &lt;Highlights /&gt;</code></pre>
-<!-- .element: class="fragment" data-fragment-index="2"-->
+    <!-- .element: class="fragment" data-fragment-index="2"-->
+  </div>
+</div>
 
 ---
 
@@ -89,6 +98,64 @@ Transform CMS data...
 
 ---
 
+<!-- .element: data-transition="slide-in fade-out"-->
+<pre style="font-size:0.9em;"><code data-noescape>&lt;Route
+  path="/"
+  component={App}&gt;
+    &lt;Route
+      path="/product/:code"
+      component={ProductPage} /&gt;
+    &lt;Route
+      path="/checkout"
+      component={CheckoutPage} /&gt;
+    ...
+    &lt;Route
+      path="&#42"
+      component={CustomPage} /&gt;
+&lt;/Route&gt;
+</code></pre>
+
+---
+
+<!-- .element: data-transition="fade-in fade-out"-->
+<pre style="font-size:0.9em;"><code data-noescape>&lt;Route
+  path="/"
+  component={App}&gt;
+    <span style="font-weight:bold;">&lt;Route
+      path="/product/:code"
+      component={ProductPage} /&gt;</span>
+    &lt;Route
+      path="/checkout"
+      component={CheckoutPage} /&gt;
+    ...
+    &lt;Route
+      path="&#42"
+      component={CustomPage} /&gt;
+&lt;/Route&gt;
+</code></pre>
+
+---
+
+<!-- .element: data-transition="fade-in fade-out"-->
+<pre style="font-size:0.9em;"><code data-noescape>&lt;Route
+  path="/"
+  component={App}&gt;
+    &lt;Route
+      path="/product/:code"
+      component={ProductPage} /&gt;
+    <span style="font-weight:bold;">&lt;Route
+      path="/checkout"
+      component={CheckoutPage} /&gt;</span>
+    ...
+    &lt;Route
+      path="&#42"
+      component={CustomPage} /&gt;
+&lt;/Route&gt;
+</code></pre>
+
+---
+
+<!-- .element: data-transition="fade-in slide-out"-->
 <pre style="font-size:0.9em;"><code data-noescape>&lt;Route
   path="/"
   component={App}&gt;
@@ -106,7 +173,8 @@ Transform CMS data...
 </code></pre>
 
 ---
-<!-- .element: data-transition="fade-in fade-out"-->
+
+<!-- .element: data-transition="slide-in fade-out"-->
 <div style="text-align:center;margin:0;border:1px solid #fff">
 <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/women-landing-header.png" alt="Header">
 <img style="border:none;margin:0;box-shadow: none;margin-top:40px;margin-bottom:40px;" data-src="content/images/loading2.gif" alt="Loading"><!-- .element: class="fragment" data-fragment-index="2"-->
@@ -130,7 +198,7 @@ Transform CMS data...
 </div>
 
 ---
-<!-- .element: data-transition="fade-in fade-out"-->
+<!-- .element: data-transition="fade-in slide-out"-->
 <div style="text-align:center;margin:0;border:1px solid #fff">
 <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/women-landing-header.png" alt="Header">
 <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/women-landing-404.png" alt="Body">
@@ -139,11 +207,28 @@ Transform CMS data...
 
 ---
 
-![more-from-collection](content/images/more-from-collection.png)<!-- .element: style="max-height: 90%; max-width: 90%; margin-top: -18px; box-shadow: none" -->
+<div style="text-align: center;">
+   <img style="border:1px solid #aaa; margin:0; box-shadow: 10px 10px 12px 0px rgba(0,0,0,0.75); max-height: 90%; max-width: 50%;"
+  data-src="content/images/camylla-full-page-trim4.png" alt="Header">
+</div>
 
 ---
 
-[checkout policy goes here]
+<!-- .element: data-transition="slide-in fade-out"-->
+<img style="border:none;margin:0;box-shadow: none; max-height: 70%; max-width: 70%;  margin-top: -18px; "
+  data-src="content/images/checkout-policy-step1.png" alt="Header">
+
+---
+
+<!-- .element: data-transition="fade-in fade-out"-->
+<img style="border:none;margin:0;box-shadow: none; max-height: 70%; max-width: 70%;  margin-top: -18px; "
+  data-src="content/images/checkout-policy-step2.png" alt="Header">
+
+---
+
+<!-- .element: data-transition="fade-in slide-out"-->
+<img style="border:none;margin:0;box-shadow: none; max-height: 70%; max-width: 70%;  margin-top: -18px; "
+  data-src="content/images/checkout-policy-step3.png" alt="Header">
 
 ---
 
@@ -189,8 +274,6 @@ Notes:
 - The CMS gives us a list of the available dimensions for each image, plus a URL with wildcard for each dimension set.
 - We plug this data into an image and use the library `lazysizes` to determine the width of the current image, so we always load the smallest possible image.
 - This allows us to harness the HTML5 native image element, which will find the smallest image for a given size, without having to hardcode sizes - `lazysizes` will dynamically set the size after the component is rendered.
-
----
 
 ---
 
