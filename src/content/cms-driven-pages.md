@@ -39,7 +39,7 @@
 <!-- .element: class="fragment" data-fragment-index="1" -->
 
 Notes:
-- On a route change, we request CMS data for the new path 
+- On a route change, we request CMS data for the new path
 - Get content modules data back as JSON
 
 ---
@@ -321,7 +321,18 @@ Notes:
 
 ---
 
-# REACT MARKDOWN SIMPLIFIED RENDERERS
+```
+import ReactMarkdown from 'ReactMarkdown';
+
+import AldoList from 'components/markdown/list';
+import AldoCodeBlock from 'components/markdown/code-block';
+
+<ReactMarkdown
+  renderers={ {
+    List: AldoList,
+    CodeBlock: AldoCodeBlock,
+  } } />
+```
 
 ---
 
