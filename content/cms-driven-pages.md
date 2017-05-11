@@ -45,7 +45,7 @@ Notes:
 ---
 
 Transform CMS data...
-<pre class="fragment" data-fragment-index="0"><code data-noescape>"uuid-00": {
+<pre><code data-noescape>"uuid-00": {
   "content-modules": {
     "uuid-01": { "type": "top-story", ... },
     "uuid-02": { "type": "main-story", ... },
@@ -58,13 +58,35 @@ Transform CMS data...
     <!-- .element: class="fragment" data-fragment-index="1"-->
   </div>
   <div style="left: 31.25%;top: 75px;float: right;z-index: -10;width: 50%;">
-    <p class="fragment" data-fragment-index="2" style="margin-top:20px;">...into React components</p>
-<pre class="fragment" data-fragment-index="2"><code data-noescape>&lt;TopStory /&gt;
+    <p class="fragment" data-fragment-index="1" style="margin-top:20px;">...into React components</p>
+<pre class="fragment" data-fragment-index="1"><code data-noescape>&lt;TopStory /&gt;
 &lt;MainStory /&gt;
 &lt;Highlights /&gt;</code></pre>
-    <!-- .element: class="fragment" data-fragment-index="2"-->
+    <!-- .element: class="fragment" data-fragment-index="1"-->
   </div>
 </div>
+
+---
+
+<p>Map CMS properties...</p>
+<pre><code data-noescape>{
+  "title": "Pretty in pastel",
+  "featured-products": {
+    "featured-product-0": { "id": "123" },
+    "featured-product-1": { "id": "456" }
+  }
+}</code></pre>
+<p class="fragment" data-fragment-index="0">
+  ...to React component props
+</p>
+```
+<h2>Pretty in pastel</h2>
+<div>
+  <ProductTile name="Stessy" url="/product/123" price="$100" />
+  <ProductTile name="Nika" url="/product/456" price="$50" />
+</div>
+```
+<!-- .element: class="fragment" data-fragment-index="0"-->
 
 ---
 
@@ -72,28 +94,11 @@ Transform CMS data...
 
 ---
 
-<p>Map CMS properties...</p>
-<pre class="fragment" data-fragment-index="0"><code data-noescape>{
-  "title": "Pretty in pastel",
-  "featured-products": {
-    "featured-product-0": { "id": "123" },
-    "featured-product-1": { "id": "456" }
+<pre><code data-noescape>"uuid-00": {
+  "content-modules": {
+    "uuid-01": { "type": "track-my-order" },
   }
 }</code></pre>
-<p class="fragment" data-fragment-index="1">
-  ...to React component props
-</p>
-```
-<h2>Pretty in pastel</h2>
-<div className='my-cms-modules__products'>
-  <ProductTile name="Stessy" url="/product/123" price="$100" />
-  <ProductTile name="Nika" url="/product/456" price="$50" />
-</div>
-```
-<!-- .element: class="fragment" data-fragment-index="1"-->
-
----
-
 ![track-order](content/images/track-order.png)
 
 ---
@@ -226,14 +231,20 @@ Transform CMS data...
 
 ---
 
-<!-- .element: data-transition="fade-in slide-out"-->
+<!-- .element: data-transition="fade-in fade-out"-->
 <img style="border:none;margin:0;box-shadow: none; max-height: 70%; max-width: 70%;  margin-top: -18px; "
   data-src="content/images/checkout-policy-step3.png" alt="Header">
 
 ---
 
-<div style="font-size: 126px; color: black; text-align: center; margin-top:100px;">
-   💪
+<!-- .element: data-transition="fade-in slide-out"-->
+<img style="border:none;margin:0;box-shadow: none; max-height: 70%; max-width: 70%;  margin-top: -18px; "
+  data-src="content/images/checkout-policy-step4.png" alt="Header">
+
+---
+
+<div style="text-align: center; margin-top:50px;">
+![viewports](content/images/fry_money.jpeg)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
 </div>
 
 ---
@@ -255,9 +266,8 @@ Transform CMS data...
     "url": "//media.aldoshoes.com/assets/shoename__[dimension].jpg"
   }
 ```
-<!-- .element: class="fragment" data-fragment-index="0"-->
 
-<p class="fragment" data-fragment-index="1">
+<p class="fragment" data-fragment-index="0">
   ...into a responsive image
 </p>
 
@@ -268,12 +278,16 @@ Transform CMS data...
   data-srcset="//media.aldoshoes.com/assets/shoename__400 400w,
                //media.aldoshoes.com/assets/shoename__1200 1200w" />
 ```
-<!-- .element: class="fragment" data-fragment-index="1"-->
+<!-- .element: class="fragment" data-fragment-index="0"-->
 
 Notes:
 - The CMS gives us a list of the available dimensions for each image, plus a URL with wildcard for each dimension set.
 - We plug this data into an image and use the library `lazysizes` to determine the width of the current image, so we always load the smallest possible image.
 - This allows us to harness the HTML5 native image element, which will find the smallest image for a given size, without having to hardcode sizes - `lazysizes` will dynamically set the size after the component is rendered.
+
+---
+
+![Help Center](content/images/customer-service.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
 
 ---
 
@@ -305,6 +319,9 @@ Notes:
 ![Checkout](content/images/progbook.jpg)<!-- .element: style="max-height: 70%; max-width: 70%;" -->
 </p>
 
+---
+
+# REACT MARKDOWN SIMPLIFIED RENDERERS
 
 ---
 
@@ -318,7 +335,6 @@ Shipping Method                         | Delivery Time      | Cost
 &#42;Express Shipping&#42;                      | 7-12 business days | $5
 Ship to an ALDO Store                   | 7-12 business days | Free
 </code></pre>
-<!-- .element: class="fragment" data-fragment-index="0"-->
 
 ---
 
@@ -329,7 +345,6 @@ Ship to an ALDO Store                   | 7-12 business days | Free
 &gt; 2. Order processed long title
 &gt; 3. Shipped
 &gt; 4. Received other long title</code></pre>
-<!-- .element: class="fragment" data-fragment-index="0"-->
 
 ---
 
@@ -338,7 +353,6 @@ Ship to an ALDO Store                   | 7-12 business days | Free
 </div>
 <pre><code data-noescape class="markdown" style="font-size:0.8em;color:#000;">&#49;. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 &#50;. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</code></pre>
-<!-- .element: class="fragment" data-fragment-index="0"-->
 
 ---
 
@@ -352,13 +366,14 @@ Ship to an ALDO Store                   | 7-12 business days | Free
 &#51;. Mail your package
 &nbsp;
    Start the checkout process by selecting “Checkout” at your shopping bag.</code></pre>
-<!-- .element: class="fragment" data-fragment-index="0"-->
 
 ---
 
-<div style="font-size: 126px; color: black; text-align: center; margin-top:100px;">
-   🎉
-</div>
+![Help Center](content/images/customer-service.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
+
+---
+
+![Home](content/images/home.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
 
 ---
 
