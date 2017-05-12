@@ -291,25 +291,25 @@ Notes:
 
 ---
 
-<div style="margin:0;margin-top:100px;">
+<div style="text-align:center;margin:0;margin-top:100px;">
 <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-table.png" alt="Table">
 </div>
 
 ---
 
-<div style="margin:0;margin-top:100px;">
+<div style="text-align:center;margin:0;margin-top:100px;">
 <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-timeline.png" alt="Timeline">
 </div>
 
 ---
 
-<div style="margin:0;margin-top:100px;">
+<div style="text-align:center;margin:0;margin-top:100px;">
 <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-list-paragraph.png" alt="List with paragraphs">
 </div>
 
 ---
 
-<div style="margin:0;margin-top:100px;">
+<div style="text-align:center;margin:0;margin-top:100px;">
 <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-list-bold-header.png" alt="List with bold header">
 </div>
 
