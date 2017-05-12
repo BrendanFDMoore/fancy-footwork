@@ -181,8 +181,8 @@ Transform CMS data...
 
 <!-- .element: data-transition="slide-in fade-out"-->
 
-CMS Page
-<!-- .element: style="margin: 0 0 40px; text-align: center"-->
+CMS Custom Page
+<!-- .element: style="font-size: 1.5em; margin: 0 0 20px; text-align: center"-->
 
 <div class="diagram-wrapper">
   <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
@@ -194,8 +194,8 @@ CMS Page
 
 <!-- .element: data-transition="fade-in fade-out"-->
 
-CMS Page
-<!-- .element: style="margin: 0 0 40px; text-align: center"-->
+CMS Custom Page
+<!-- .element: style="font-size: 1.5em; margin: 0 0 20px; text-align: center"-->
 
 <div class="diagram-wrapper">
   <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
@@ -207,8 +207,21 @@ CMS Page
 
 <!-- .element: data-transition="fade-in fade-out"-->
 
-CMS Page
-<!-- .element: style="margin: 0 0 40px; text-align: center"-->
+CMS Custom Page
+<!-- .element: style="font-size: 1.5em; margin: 0 0 20px; text-align: center"-->
+
+<div class="diagram-wrapper">
+  <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
+  <div class="diagram is-loading" style="height: 360px">Loading...</div>
+  <div class="diagram is-header-footer" style="height: 75px">FOOTER</div>
+</div>
+
+---
+
+<!-- .element: data-transition="fade-in fade-out"-->
+
+CMS Custom Page
+<!-- .element: style="font-size: 1.5em; margin: 0 0 20px; text-align: center"-->
 
 <div class="diagram-wrapper">
   <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
@@ -220,8 +233,8 @@ CMS Page
 
 <!-- .element: data-transition="slide-in fade-out"-->
 
-Product Detail Page
-<!-- .element: style="margin: 0 0 40px; text-align: center"-->
+Product Page
+<!-- .element: style="font-size: 1.5em; margin: 0 0 20px; text-align: center"-->
 
 <div class="diagram-wrapper">
   <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
@@ -235,7 +248,7 @@ Product Detail Page
 <!-- .element: data-transition="slide-in fade-out"-->
 
 Checkout Page
-<!-- .element: style="margin: 0 0 40px; text-align: center"-->
+<!-- .element: style="font-size: 1.5em; margin: 0 0 20px; text-align: center"-->
 
 <div class="diagram-wrapper">
   <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
@@ -251,7 +264,7 @@ Checkout Page
 <!-- .element: data-transition="fade-in fade-out"-->
 
 Checkout Page
-<!-- .element: style="margin: 0 0 40px; text-align: center"-->
+<!-- .element: style="font-size: 1.5em; margin: 0 0 20px; text-align: center"-->
 
 <div class="diagram-wrapper">
   <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
