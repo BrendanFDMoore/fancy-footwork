@@ -210,3 +210,40 @@ html.the-end .state-background {
     background:none;
   }
 }
+
+.diagram {
+  width: 80%;
+  align-items: center;
+  display: flex;
+  font-size: 48px !important;
+  justify-content: center;
+  margin-left: auto !important;
+  margin-right: auto !important;
+
+  > .diagram {
+    margin: 0 !important;
+    width: auto;
+  }
+
+  &.is-header-footer {
+    background-color: $rangleRed;
+  }
+
+  &.is-loading {
+    color: black;
+  }
+
+  &.is-ecommerce,
+  .is-ecommerce {
+    background-color: #666;
+  }
+
+  &.is-loaded,
+  .is-loaded {
+    background-color: #999;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}

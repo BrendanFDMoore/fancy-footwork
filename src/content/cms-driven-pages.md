@@ -180,66 +180,87 @@ Transform CMS data...
 ---
 
 <!-- .element: data-transition="slide-in fade-out"-->
-<div style="text-align:center;margin:0;border:1px solid #fff">
-<img style="border:none;margin:0;box-shadow: none;" data-src="content/images/women-landing-header.png" alt="Header">
-<img style="border:none;margin:0;box-shadow: none;margin-top:40px;margin-bottom:40px;" data-src="content/images/loading2.gif" alt="Loading"><!-- .element: class="fragment" data-fragment-index="2"-->
-<img style="border:none;margin:0;box-shadow: none;" data-src="content/images/women-landing-footer.png" alt="Footer"><!-- .element: class="fragment" data-fragment-index="1"-->
+
+CMS Page
+<!-- .element: style="margin: 0 0 40px; text-align: center"-->
+
+<div class="diagram-wrapper">
+  <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
+  <div class="diagram is-loading" style="height: 360px">Loading...</div>
+  <div class="diagram is-header-footer" style="height: 75px">FOOTER</div>
 </div>
 
 ---
+
 <!-- .element: data-transition="fade-in fade-out"-->
-<div style="text-align:center;margin:0;border:1px solid #fff">
-<img style="border:none;margin:0;box-shadow: none;" data-src="content/images/women-landing-header.png" alt="Header">
-<img style="border:none;margin:0;box-shadow: none;" data-src="content/images/women-landing-body.png" alt="Body">
-<img style="border:none;margin:0;box-shadow: none;" data-src="content/images/women-landing-footer.png" alt="Footer">
+
+CMS Page
+<!-- .element: style="margin: 0 0 40px; text-align: center"-->
+
+<div class="diagram-wrapper">
+  <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
+  <div class="diagram is-loaded" style="height: 360px">CMS MODULES</div>
+  <div class="diagram is-header-footer" style="height: 75px">FOOTER</div>
 </div>
 
 ---
+
 <!-- .element: data-transition="fade-in fade-out"-->
-<div style="text-align:center;margin:0;border:1px solid #fff">
-<img style="border:none;margin:0;box-shadow: none;" data-src="content/images/women-landing-header.png" alt="Header">
-<img style="border:none;margin:0;box-shadow: none;margin-top:40px;margin-bottom:40px;" data-src="content/images/loading2.gif" alt="Loading">
-<img style="border:none;margin:0;box-shadow: none;" data-src="content/images/women-landing-footer.png" alt="Footer">
-</div>
 
----
-<!-- .element: data-transition="fade-in slide-out"-->
-<div style="text-align:center;margin:0;border:1px solid #fff">
-<img style="border:none;margin:0;box-shadow: none;" data-src="content/images/women-landing-header.png" alt="Header">
-<img style="border:none;margin:0;box-shadow: none;" data-src="content/images/women-landing-404.png" alt="Body">
-<img style="border:none;margin:0;box-shadow: none;" data-src="content/images/women-landing-footer.png" alt="Footer">
-</div>
+CMS Page
+<!-- .element: style="margin: 0 0 40px; text-align: center"-->
 
----
-
-<div style="text-align: center;">
-   <img style="border:1px solid #aaa; margin:0; box-shadow: 10px 10px 12px 0px rgba(0,0,0,0.75); max-height: 90%; max-width: 50%;"
-  data-src="content/images/camylla-full-page-trim4.png" alt="Header">
+<div class="diagram-wrapper">
+  <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
+  <div class="diagram is-loaded" style="height: 360px">404 Page</div>
+  <div class="diagram is-header-footer" style="height: 75px">FOOTER</div>
 </div>
 
 ---
 
 <!-- .element: data-transition="slide-in fade-out"-->
-<img style="border:none;margin:0;box-shadow: none; max-height: 70%; max-width: 70%;  margin-top: -18px; "
-  data-src="content/images/checkout-policy-step1.png" alt="Header">
+
+Product Detail Page
+<!-- .element: style="margin: 0 0 40px; text-align: center"-->
+
+<div class="diagram-wrapper">
+  <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
+  <div class="diagram is-ecommerce" style="height: 175px">E-COMMERCE DATA</div>
+  <div class="diagram is-loaded" style="height: 175px">CMS DATA</div>
+  <div class="diagram is-header-footer" style="height: 75px">FOOTER</div>
+</div>
+
+---
+
+<!-- .element: data-transition="slide-in fade-out"-->
+
+Checkout Page
+<!-- .element: style="margin: 0 0 40px; text-align: center"-->
+
+<div class="diagram-wrapper">
+  <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
+  <div class="diagram" style="height: 360px; display: flex; align-items: stretch; justify-content: space-between">
+    <div class="diagram is-ecommerce" style="width: 60%">E-COMMERCE DATA</div>
+    <div class="diagram is-loaded" style="width: calc(40% - 10px)">CMS DATA</div>
+  </div>
+  <div class="diagram is-header-footer" style="height: 75px">FOOTER</div>
+</div>
 
 ---
 
 <!-- .element: data-transition="fade-in fade-out"-->
-<img style="border:none;margin:0;box-shadow: none; max-height: 70%; max-width: 70%;  margin-top: -18px; "
-  data-src="content/images/checkout-policy-step2.png" alt="Header">
 
----
+Checkout Page
+<!-- .element: style="margin: 0 0 40px; text-align: center"-->
 
-<!-- .element: data-transition="fade-in fade-out"-->
-<img style="border:none;margin:0;box-shadow: none; max-height: 70%; max-width: 70%;  margin-top: -18px; "
-  data-src="content/images/checkout-policy-step3.png" alt="Header">
-
----
-
-<!-- .element: data-transition="fade-in slide-out"-->
-<img style="border:none;margin:0;box-shadow: none; max-height: 70%; max-width: 70%;  margin-top: -18px; "
-  data-src="content/images/checkout-policy-step4.png" alt="Header">
+<div class="diagram-wrapper">
+  <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
+  <div class="diagram" style="height: 360px; display: flex; align-items: stretch; justify-content: space-between">
+    <div class="diagram is-ecommerce" style="width: 60%">E-COMMERCE DATA</div>
+    <div class="diagram" style="width: calc(40% - 10px)"></div>
+  </div>
+  <div class="diagram is-header-footer" style="height: 75px">FOOTER</div>
+</div>
 
 ---
 
