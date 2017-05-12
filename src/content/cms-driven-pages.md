@@ -291,25 +291,25 @@ Notes:
 
 ---
 
-<div style="margin:0;margin-top:100px;">
+<div style="text-align:center;margin:0;margin-top:100px;">
 <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-table.png" alt="Table">
 </div>
 
 ---
 
-<div style="margin:0;margin-top:100px;">
+<div style="text-align:center;margin:0;margin-top:100px;">
 <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-timeline.png" alt="Timeline">
 </div>
 
 ---
 
-<div style="margin:0;margin-top:100px;">
+<div style="text-align:center;margin:0;margin-top:100px;">
 <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-list-paragraph.png" alt="List with paragraphs">
 </div>
 
 ---
 
-<div style="margin:0;margin-top:100px;">
+<div style="text-align:center;margin:0;margin-top:100px;">
 <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-list-bold-header.png" alt="List with bold header">
 </div>
 
@@ -336,39 +336,43 @@ import AldoCodeBlock from 'components/markdown/code-block';
 
 ---
 
-<div style="margin:0;">
-<img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-table.png" alt="Table">
-</div>
-<pre><code data-noescape class="markdown" style="font-size:0.8em;color:#000;">&#96;&#96;&#96;
+<div style="text-align:center;margin:0;">
+  <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-table.png" alt="Table">
+  <pre style="max-width:70%;"><code data-noescape class="markdown" style="font-size:0.8em;color:#000;">&#96;&#96;&#96;
 Shipping Method                         | Delivery Time      | Cost
 --------------------------------------- | ------------------ | ----
 &#91;Standard Shipping&#93;&#40;http://google.com &#41; | 5-7 business days  | $10
 &#42;Express Shipping&#42;                      | 7-12 business days | $5
 Ship to an ALDO Store                   | 7-12 business days | Free
 &#96;&#96;&#96;</code></pre>
+</div>
 
 ---
 
-<div style="margin:0;">
-<img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-timeline.png" alt="Timeline">
+<div style="text-align:center;margin:0;">
+  <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-timeline.png" alt="Timeline">
+  <pre style="max-width:50%; white-space: pre-wrap;"><code data-noescape class="markdown" style="font-size:0.8em;color:#000;">&gt;1. Order placed
+&gt;2. Order processed long title
+&gt;3. Shipped
+&gt;4. Received other long title
+  </code></pre>
 </div>
-<pre><code data-noescape class="markdown" style="font-size:0.8em;color:#000;">&gt; 1. Order placed
-&gt; 2. Order processed long title
-&gt; 3. Shipped
-&gt; 4. Received other long title</code></pre>
 
 ---
 
-<div style="margin:0;">
-<img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-list-paragraph.png" alt="List with paragraphs">
-</div>
-<pre><code data-noescape class="markdown" style="font-size:0.8em;color:#000;">&#49;. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+<div style="text-align:center;margin:0;">
+  <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-list-paragraph.png" alt="List with paragraphs">
+  <pre style="max-width:60%; white-space: pre-wrap;"><code data-noescape class="markdown" style="font-size:0.8em;color:#000;">
+&#49;. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 &#50;. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</code></pre>
+</div>
 
 ---
 
-<div style="margin:0;"><img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-list-bold-header.png" alt="List with bold header"></div>
-<pre><code data-noescape class="markdown" style="font-size:0.8em;color:#000;">&#49;. Print out a mailing label
+<div style="text-align:center;margin:0;">
+  <img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-list-bold-header.png" alt="List with bold header">
+  <pre style="max-width:60%; white-space: pre-wrap;"><code data-noescape class="markdown" style="font-size:0.8em;color:#000;">
+&#49;. Print out a mailing label
 &nbsp;
    Search for an item or browse the site.
 &#50;. Place your items for return in a box.
@@ -377,6 +381,7 @@ Ship to an ALDO Store                   | 7-12 business days | Free
 &#51;. Mail your package
 &nbsp;
    Start the checkout process by selecting “Checkout” at your shopping bag.</code></pre>
+</div>
 
 ---
 
