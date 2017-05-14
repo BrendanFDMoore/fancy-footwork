@@ -212,13 +212,14 @@ html.the-end .state-background {
 }
 
 .diagram {
-  width: 80%;
+  width: 90%;
   align-items: center;
   display: flex;
   font-size: 48px !important;
   justify-content: center;
   margin-left: auto !important;
   margin-right: auto !important;
+  text-align: center;
 
   > .diagram {
     margin: 0 !important;
