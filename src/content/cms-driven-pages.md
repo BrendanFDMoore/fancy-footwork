@@ -305,6 +305,8 @@ Transform CMS data...
 
 ---
 
+<!-- .element: data-transition="slide-in fade-out"-->
+
 <p>Turn CMS image props...</p>
 
 ```js
@@ -321,19 +323,85 @@ Transform CMS data...
   ...into a responsive image
 </p>
 
-```
+```smalltalk
 <img
-  class="lazyload"
-  data-sizes="auto"
-  data-srcset="//media.aldoshoes.com/assets/shoename__400 400w,
-               //media.aldoshoes.com/assets/shoename__1200 1200w" />
+  srcset="//media.aldoshoes.com/assets/shoename__400.jpg 400w,
+          //media.aldoshoes.com/assets/shoename__1200.jpg 1200w" />
 ```
 <!-- .element: class="fragment" data-fragment-index="0"-->
 
-Notes:
-- The CMS gives us a list of the available dimensions for each image, plus a URL with wildcard for each dimension set.
-- We plug this data into an image and use the library `lazysizes` to determine the width of the current image, so we always load the smallest possible image.
-- This allows us to harness the HTML5 native image element, which will find the smallest image for a given size, without having to hardcode sizes - `lazysizes` will dynamically set the size after the component is rendered.
+---
+
+<!-- .element: data-transition="fade-in fade-out"-->
+
+<p>Turn CMS image props...</p>
+
+```js
+  "image-asset": {
+    "dimensions": [
+      { "h": "400", "w": "400" },
+      { "h": "1200", "w": "1200" }
+    ],
+    "url": "//media.aldoshoes.com/assets/shoename__[dimension].jpg"
+  }
+```
+
+...into a responsive image
+
+<pre><code data-noescape class="smalltalk"><span style="opacity:0.5;">&lt;img
+  srcset="//media.aldoshoes.com/assets/shoename__400.jpg 400w,
+          //media.aldoshoes.com/assets/shoename__1200.jpg 1200w"</span>
+  sizes="I don't know, I guess 500?" <span style="opacity:0.5;">/&gt;
+</span></code></pre>
+
+---
+
+<!-- .element: data-transition="fade-in fade-out"-->
+
+<p>Turn CMS image props...</p>
+
+```js
+  "image-asset": {
+    "dimensions": [
+      { "h": "400", "w": "400" },
+      { "h": "1200", "w": "1200" }
+    ],
+    "url": "//media.aldoshoes.com/assets/shoename__[dimension].jpg"
+  }
+```
+
+...into a responsive image
+
+<pre><code data-noescape class="smalltalk"><span style="opacity:0.5;">&lt;img
+  srcset="//media.aldoshoes.com/assets/shoename__400.jpg 400w,
+          //media.aldoshoes.com/assets/shoename__1200.jpg 1200w"</span>
+  data-sizes="auto"
+  class="lazyload" <span style="opacity:0.5;">/&gt;
+</span></code></pre>
+
+---
+
+<!-- .element: data-transition="fade-in fade-out"-->
+
+<p>Turn CMS image props...</p>
+
+```js
+  "image-asset": {
+    "dimensions": [
+      { "h": "400", "w": "400" },
+      { "h": "1200", "w": "1200" }
+    ],
+    "url": "//media.aldoshoes.com/assets/shoename__[dimension].jpg"
+  }
+```
+
+...into a responsive image
+
+<pre><code data-noescape class="smalltalk"><span style="opacity:0.5;">&lt;img
+  srcset="//media.aldoshoes.com/assets/shoename__400.jpg 400w,
+          //media.aldoshoes.com/assets/shoename__1200.jpg 1200w"</span>
+  sizes="521px" <span style="opacity:0.5;">/&gt;
+</span></code></pre>
 
 ---
 
