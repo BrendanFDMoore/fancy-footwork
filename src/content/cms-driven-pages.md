@@ -3,16 +3,19 @@
 </div>
 
 ---
+<!-- .element: style="text-align: center" -->
 
-![Home](content/images/home.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
-
----
-
-![PLP](content/images/plp.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
+![Home](content/images/new-homepage-men.png)<!-- .element: style="box-shadow: none; margin-top: -35px" -->
 
 ---
+<!-- .element: style="text-align: center" -->
 
-![Women](content/images/women.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
+![Totes](content/images/new-totes-plp.png)<!-- .element: style="box-shadow: none; margin-top: -35px" -->
+
+---
+<!-- .element: style="text-align: center" -->
+
+![Women](content/images/new-women.png)<!-- .element: style="box-shadow: none; margin-top: -35px" -->
 
 ---
 
@@ -374,8 +377,9 @@ Transform CMS data...
 </span></code></pre>
 
 ---
+<!-- .element: style="text-align: center" -->
 
-![Help Center](content/images/customer-service.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
+![Delivery](content/images/new-delivery.png)<!-- .element: style="box-shadow: none; margin-top: -35px" -->
 
 ---
 
@@ -477,9 +481,11 @@ Ship to an ALDO Store                   | 7-12 business days | Free
 </div>
 
 ---
+<!-- .element: style="text-align: center" -->
 
-![Help Center](content/images/customer-service.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
+![Ordering](content/images/new-ordering.png)<!-- .element: style="box-shadow: none; margin-top: -35px" -->
 
 ---
+<!-- .element: style="text-align: center" -->
 
-![Home](content/images/home.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
+![Collection](content/images/new-floral-collection.png)<!-- .element: style="box-shadow: none; margin-top: -35px" -->
