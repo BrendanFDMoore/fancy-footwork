@@ -211,6 +211,16 @@ html.the-end .state-background {
   }
 }
 
+.diagram-wrapper {
+  margin-bottom: 20px !important;
+  margin-top: 20px !important;
+
+  .diagram-wrapper {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+  }
+}
+
 .diagram {
   width: 90%;
   align-items: center;
