@@ -335,26 +335,31 @@ Notes:
 
 ---
 
-<div style="text-align:center;margin:0;margin-top:100px;">
-<img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-table.png" alt="Table">
-</div>
-
----
-
-<div style="text-align:center;margin:0;margin-top:100px;">
-<img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-timeline.png" alt="Timeline">
-</div>
-
----
-
-<div style="text-align:center;margin:0;margin-top:100px;">
-<img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-list-paragraph.png" alt="List with paragraphs">
-</div>
-
----
-
-<div style="text-align:center;margin:0;margin-top:100px;">
-<img style="border:none;margin:0;box-shadow: none;" data-src="content/images/md-list-bold-header.png" alt="List with bold header">
+<div style="margin-top:50px;">
+  <div style="left: -8.33%;text-align: center;float: left;width: 50%;z-index: -10;">
+    <div style="height:35vh;">
+      <div style="text-align:center;margin:0;">
+        <img style="border:none;margin:0;box-shadow: none; max-width:80%;" data-src="content/images/md-table.png" alt="Table">
+      </div>
+    </div>
+    <div style="height:35vh;">
+      <div style="text-align:center;margin:0;">
+        <img style="border:none;margin:0;box-shadow: none; max-width:80%;" data-src="content/images/md-timeline.png" alt="Table">
+      </div>
+    </div>
+  </div>
+  <div style="left: 31.25%;top: 75px;float: right;z-index: -10;width: 50%;">
+    <div style="height:35vh;">
+      <div style="text-align:center;margin:0;">
+        <img style="border:none;margin:0;box-shadow: none; max-width:80%;" data-src="content/images/md-list-paragraph.png" alt="Table">
+      </div>
+    </div>
+    <div style="height:35vh;">
+      <div style="text-align:center;margin:0;">
+        <img style="border:none;margin:0;box-shadow: none; max-width:80%;" data-src="content/images/md-list-bold-header.png" alt="Table">
+      </div>
+    </div>
+  </div>
 </div>
 
 ---
