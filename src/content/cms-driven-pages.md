@@ -124,45 +124,45 @@ Transform CMS data...
 ---
 
 <!-- .element: data-transition="fade-in fade-out"-->
-<pre style="font-size:0.9em;"><code data-noescape>&lt;Route
+<pre style="font-size:0.9em;"><code data-noescape><span style="opacity:0.5;">&lt;Route
   path="/"
-  component={App}&gt;
+  component={App}&gt;</span>
     <span style="font-weight:bold;">&lt;Route
       path="/product/:code"
       component={ProductPage} /&gt;</span>
-    &lt;Route
+    <span style="opacity:0.5;">&lt;Route
       path="/checkout"
       component={CheckoutPage} /&gt;
     ...
     &lt;Route
       path="&#42"
       component={CustomPage} /&gt;
-&lt;/Route&gt;
+&lt;/Route&gt;</span>
 </code></pre>
 
 ---
 
 <!-- .element: data-transition="fade-in fade-out"-->
-<pre style="font-size:0.9em;"><code data-noescape>&lt;Route
+<pre style="font-size:0.9em;"><code data-noescape><span style="opacity:0.5;">&lt;Route
   path="/"
   component={App}&gt;
     &lt;Route
       path="/product/:code"
-      component={ProductPage} /&gt;
+      component={ProductPage} /&gt;</span>
     <span style="font-weight:bold;">&lt;Route
       path="/checkout"
       component={CheckoutPage} /&gt;</span>
-    ...
+    <span style="opacity:0.5;">...
     &lt;Route
       path="&#42"
       component={CustomPage} /&gt;
-&lt;/Route&gt;
+&lt;/Route&gt;</span>
 </code></pre>
 
 ---
 
 <!-- .element: data-transition="fade-in slide-out"-->
-<pre style="font-size:0.9em;"><code data-noescape>&lt;Route
+<pre style="font-size:0.9em;"><code data-noescape><span style="opacity:0.5;">&lt;Route
   path="/"
   component={App}&gt;
     &lt;Route
@@ -171,19 +171,16 @@ Transform CMS data...
     &lt;Route
       path="/checkout"
       component={CheckoutPage} /&gt;
-    ...<span style="font-weight:bold;">
+    ...</span><span style="font-weight:bold;opacity:1.0;">
     &lt;Route
       path="&#42"
       component={CustomPage} /&gt;</span>
-&lt;/Route&gt;
+<span style="opacity:0.5;">&lt;/Route&gt;</span>
 </code></pre>
 
 ---
 
 <!-- .element: data-transition="slide-in fade-out"-->
-
-CMS Custom Page
-<!-- .element: style="font-size: 1.5em; margin: 0 0 20px; text-align: center"-->
 
 <div class="diagram-wrapper">
   <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
@@ -194,9 +191,6 @@ CMS Custom Page
 ---
 
 <!-- .element: data-transition="fade-in fade-out"-->
-
-CMS Custom Page
-<!-- .element: style="font-size: 1.5em; margin: 0 0 20px; text-align: center"-->
 
 <div class="diagram-wrapper">
   <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
@@ -208,9 +202,6 @@ CMS Custom Page
 
 <!-- .element: data-transition="fade-in fade-out"-->
 
-CMS Custom Page
-<!-- .element: style="font-size: 1.5em; margin: 0 0 20px; text-align: center"-->
-
 <div class="diagram-wrapper">
   <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
   <div class="diagram is-loading" style="height: 360px">Loading...</div>
@@ -221,9 +212,6 @@ CMS Custom Page
 
 <!-- .element: data-transition="fade-in fade-out"-->
 
-CMS Custom Page
-<!-- .element: style="font-size: 1.5em; margin: 0 0 20px; text-align: center"-->
-
 <div class="diagram-wrapper">
   <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
   <div class="diagram is-loaded" style="height: 360px">404 Page</div>
@@ -232,24 +220,7 @@ CMS Custom Page
 
 ---
 
-<!-- .element: data-transition="slide-in fade-out"-->
-
-Product Page
-<!-- .element: style="font-size: 1.5em; margin: 0 0 20px; text-align: center"-->
-
-<div class="diagram-wrapper">
-  <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
-  <div class="diagram is-ecommerce" style="height: 175px">E-COMMERCE DATA</div>
-  <div class="diagram is-loaded" style="height: 175px">CMS DATA</div>
-  <div class="diagram is-header-footer" style="height: 75px">FOOTER</div>
-</div>
-
----
-
-<!-- .element: data-transition="fade-in slide-out"-->
-
-Product Page
-<!-- .element: style="font-size: 1.5em; margin: 0 0 20px; text-align: center"-->
+<!-- .element: data-transition="fade-in fade-out"-->
 
 <div>
   <div style=" left: -8.33%; text-align: center; float: left; width: 50%; z-index: -10;">
@@ -268,29 +239,7 @@ Product Page
 
 ---
 
-<!-- .element: data-transition="slide-in fade-out"-->
-
-Checkout Page
-<!-- .element: style="font-size: 1.5em; margin: 0 0 20px; text-align: center"-->
-
-<div class="diagram-wrapper">
-  <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
-  <div class="diagram" style="height: 360px; display: flex; align-items: stretch; justify-content: space-between">
-    <div class="diagram is-ecommerce" style="width: 60%">E-COMMERCE DATA</div>
-    <div class="diagram-wrapper" style="width: calc(40% - 0px);">
-      <div class="diagram is-ecommerce" style="height: 175px; margin-right: 0px !important;">E-COMMERCE DATA</div>
-      <div class="diagram is-loaded" style="height: 175px; margin-right: 0px !important;">CMS DATA</div>
-    </div>
-  </div>
-  <div class="diagram is-header-footer" style="height: 75px">FOOTER</div>
-</div>
-
----
-
 <!-- .element: data-transition="fade-in fade-out"-->
-
-Checkout Page
-<!-- .element: style="font-size: 1.5em; margin: 0 0 20px; text-align: center"-->
 
 <div>
   <div style=" left: -8.33%; text-align: center; float: left; width: 50%; z-index: -10;">
@@ -315,9 +264,6 @@ Checkout Page
 ---
 
 <!-- .element: data-transition="fade-in slide-out"-->
-
-Checkout Page
-<!-- .element: style="font-size: 1.5em; margin: 0 0 20px; text-align: center"-->
 
 <div>
   <div style=" left: -8.33%; text-align: center; float: left; width: 50%; z-index: -10;">

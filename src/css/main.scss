@@ -227,11 +227,16 @@ html.the-end .state-background {
   }
 
   &.is-header-footer {
-    background-color: $rangleRed;
+    box-sizing: border-box;
+    border: 1px solid black;
+    color: black;
+    background-color: none;
   }
 
   &.is-loading {
     color: black;
+    box-sizing: border-box;
+    border: 1px solid black;
   }
 
   &.is-ecommerce,
