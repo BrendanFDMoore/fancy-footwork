@@ -54,7 +54,8 @@ Transform CMS data...
 }</code></pre>
 <div>
   <div style="left: -8.33%;text-align: center;float: left;width: 50%;z-index: -10;">
-    <img style="border:none;box-shadow: none;max-height: 85%; max-width: 85%;" data-src="content/images/transmogrify.png" alt="Transmogrify!">
+    <p class="fragment" data-fragment-index="1" style="margin-bottom: 5px;"> Transmogrify! </p>
+    <img style="border:none;box-shadow: none;max-height: 85%; max-width: 85%;margin-top: 5px;" data-src="content/images/transmogrify.png" alt="Transmogrify!">
     <!-- .element: class="fragment" data-fragment-index="1"-->
   </div>
   <div style="left: 31.25%;top: 75px;float: right;z-index: -10;width: 50%;">
@@ -123,45 +124,45 @@ Transform CMS data...
 ---
 
 <!-- .element: data-transition="fade-in fade-out"-->
-<pre style="font-size:0.9em;"><code data-noescape>&lt;Route
+<pre style="font-size:0.9em;"><code data-noescape><span style="opacity:0.5;">&lt;Route
   path="/"
-  component={App}&gt;
+  component={App}&gt;</span>
     <span style="font-weight:bold;">&lt;Route
       path="/product/:code"
       component={ProductPage} /&gt;</span>
-    &lt;Route
+    <span style="opacity:0.5;">&lt;Route
       path="/checkout"
       component={CheckoutPage} /&gt;
     ...
     &lt;Route
       path="&#42"
       component={CustomPage} /&gt;
-&lt;/Route&gt;
+&lt;/Route&gt;</span>
 </code></pre>
 
 ---
 
 <!-- .element: data-transition="fade-in fade-out"-->
-<pre style="font-size:0.9em;"><code data-noescape>&lt;Route
+<pre style="font-size:0.9em;"><code data-noescape><span style="opacity:0.5;">&lt;Route
   path="/"
   component={App}&gt;
     &lt;Route
       path="/product/:code"
-      component={ProductPage} /&gt;
+      component={ProductPage} /&gt;</span>
     <span style="font-weight:bold;">&lt;Route
       path="/checkout"
       component={CheckoutPage} /&gt;</span>
-    ...
+    <span style="opacity:0.5;">...
     &lt;Route
       path="&#42"
       component={CustomPage} /&gt;
-&lt;/Route&gt;
+&lt;/Route&gt;</span>
 </code></pre>
 
 ---
 
 <!-- .element: data-transition="fade-in slide-out"-->
-<pre style="font-size:0.9em;"><code data-noescape>&lt;Route
+<pre style="font-size:0.9em;"><code data-noescape><span style="opacity:0.5;">&lt;Route
   path="/"
   component={App}&gt;
     &lt;Route
@@ -170,19 +171,16 @@ Transform CMS data...
     &lt;Route
       path="/checkout"
       component={CheckoutPage} /&gt;
-    ...<span style="font-weight:bold;">
+    ...</span><span style="font-weight:bold;opacity:1.0;">
     &lt;Route
       path="&#42"
       component={CustomPage} /&gt;</span>
-&lt;/Route&gt;
+<span style="opacity:0.5;">&lt;/Route&gt;</span>
 </code></pre>
 
 ---
 
 <!-- .element: data-transition="slide-in fade-out"-->
-
-CMS Custom Page
-<!-- .element: style="font-size: 1.5em; margin: 0 0 20px; text-align: center"-->
 
 <div class="diagram-wrapper">
   <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
@@ -193,9 +191,6 @@ CMS Custom Page
 ---
 
 <!-- .element: data-transition="fade-in fade-out"-->
-
-CMS Custom Page
-<!-- .element: style="font-size: 1.5em; margin: 0 0 20px; text-align: center"-->
 
 <div class="diagram-wrapper">
   <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
@@ -207,9 +202,6 @@ CMS Custom Page
 
 <!-- .element: data-transition="fade-in fade-out"-->
 
-CMS Custom Page
-<!-- .element: style="font-size: 1.5em; margin: 0 0 20px; text-align: center"-->
-
 <div class="diagram-wrapper">
   <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
   <div class="diagram is-loading" style="height: 360px">Loading...</div>
@@ -220,9 +212,6 @@ CMS Custom Page
 
 <!-- .element: data-transition="fade-in fade-out"-->
 
-CMS Custom Page
-<!-- .element: style="font-size: 1.5em; margin: 0 0 20px; text-align: center"-->
-
 <div class="diagram-wrapper">
   <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
   <div class="diagram is-loaded" style="height: 360px">404 Page</div>
@@ -231,48 +220,69 @@ CMS Custom Page
 
 ---
 
-<!-- .element: data-transition="slide-in fade-out"-->
+<!-- .element: data-transition="fade-in fade-out"-->
 
-Product Page
-<!-- .element: style="font-size: 1.5em; margin: 0 0 20px; text-align: center"-->
-
-<div class="diagram-wrapper">
-  <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
-  <div class="diagram is-ecommerce" style="height: 175px">E-COMMERCE DATA</div>
-  <div class="diagram is-loaded" style="height: 175px">CMS DATA</div>
-  <div class="diagram is-header-footer" style="height: 75px">FOOTER</div>
-</div>
-
----
-
-<!-- .element: data-transition="slide-in fade-out"-->
-
-Checkout Page
-<!-- .element: style="font-size: 1.5em; margin: 0 0 20px; text-align: center"-->
-
-<div class="diagram-wrapper">
-  <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
-  <div class="diagram" style="height: 360px; display: flex; align-items: stretch; justify-content: space-between">
-    <div class="diagram is-ecommerce" style="width: 60%">E-COMMERCE DATA</div>
-    <div class="diagram is-loaded" style="width: calc(40% - 10px)">CMS DATA</div>
+<div>
+  <div style=" left: -8.33%; text-align: center; float: left; width: 50%; z-index: -10;">
+    <div class="diagram-wrapper">
+      <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
+      <div class="diagram is-ecommerce" style="height: 175px">E-COMMERCE DATA</div>
+      <div class="diagram is-loaded" style="height: 175px">CMS DATA</div>
+      <div class="diagram is-header-footer" style="height: 75px">FOOTER</div>
+    </div>
   </div>
-  <div class="diagram is-header-footer" style="height: 75px">FOOTER</div>
+  <div style=" left: 31.25%; top: 75px; float: right; text-align: center; z-index: -10; width: 50%;">
+    <img style="border:1px solid #aaa; margin:0; box-shadow: 10px 10px 12px 0px rgba(0,0,0,0.75); max-height: 90%; max-width: 80%;"
+ -  data-src="content/images/camylla-full-page-trim4.png" alt="Header">
+  </div>
 </div>
 
 ---
 
 <!-- .element: data-transition="fade-in fade-out"-->
 
-Checkout Page
-<!-- .element: style="font-size: 1.5em; margin: 0 0 20px; text-align: center"-->
-
-<div class="diagram-wrapper">
-  <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
-  <div class="diagram" style="height: 360px; display: flex; align-items: stretch; justify-content: space-between">
-    <div class="diagram is-ecommerce" style="width: 60%">E-COMMERCE DATA</div>
-    <div class="diagram" style="width: calc(40% - 10px)"></div>
+<div>
+  <div style=" left: -8.33%; text-align: center; float: left; width: 50%; z-index: -10;">
+    <div class="diagram-wrapper">
+      <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
+      <div class="diagram" style="height: 360px; display: flex; align-items: stretch; justify-content: space-between">
+        <div class="diagram is-ecommerce" style="width: 60%; margin-right: 0px !important;">E-COMMERCE DATA</div>
+        <div class="diagram-wrapper" style="width: calc(40% - 0px);">
+          <div class="diagram is-ecommerce" style="height: 175px; margin-right: 0px !important; font-size: 24px !important;">E-COMMERCE DATA</div>
+          <div class="diagram is-loaded" style="height: 175px; margin-right: 0px !important; font-size: 24px !important;">CMS DATA</div>
+        </div>
+      </div>
+      <div class="diagram is-header-footer" style="height: 75px">FOOTER</div>
+    </div>
   </div>
-  <div class="diagram is-header-footer" style="height: 75px">FOOTER</div>
+  <div style=" left: 31.25%; top: 75px; float: right; text-align: center; z-index: -10; width: 50%;">
+    <img style="border:none;margin:0;box-shadow: none; max-height: 100%; max-width: 100%; "
+   data-src="content/images/checkout-policy-step3.png" alt="Header">
+  </div>
+</div>
+
+---
+
+<!-- .element: data-transition="fade-in slide-out"-->
+
+<div>
+  <div style=" left: -8.33%; text-align: center; float: left; width: 50%; z-index: -10;">
+    <div class="diagram-wrapper">
+      <div class="diagram is-header-footer" style="height: 75px">HEADER</div>
+      <div class="diagram" style="height: 360px; display: flex; align-items: stretch; justify-content: space-between">
+        <div class="diagram is-ecommerce" style="width: 60%; margin-right: 0px !important;">E-COMMERCE DATA</div>
+        <div class="diagram-wrapper" style="width: calc(40% - 0px);">
+          <div class="diagram is-ecommerce" style="height: 175px; margin-right: 0px !important; font-size: 24px !important;">E-COMMERCE DATA</div>
+          <div class="diagram is-not-loaded" style="height: 175px; margin-right: 0px !important; font-size: 24px !important;"></div>
+        </div>
+      </div>
+      <div class="diagram is-header-footer" style="height: 75px">FOOTER</div>
+    </div>
+  </div>
+  <div style=" left: 31.25%; top: 75px; float: right; text-align: center; z-index: -10; width: 50%;">
+    <img style="border:none;margin:0;box-shadow: none; max-height: 100%; max-width: 100%; "
+   data-src="content/images/checkout-policy-step4.png" alt="Header">
+  </div>
 </div>
 
 ---
