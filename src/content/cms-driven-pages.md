@@ -4,17 +4,14 @@
 
 ---
 
-## Home page
 ![Home](content/images/home.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
 
 ---
 
-## Now Trending Handbags
 ![PLP](content/images/plp.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
 
 ---
 
-## Women's styles landing page
 ![Women](content/images/women.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
 
 ---
@@ -226,8 +223,6 @@ Transform CMS data...
 
 ---
 
-<!-- .element: data-transition="fade-in fade-out"-->
-
 <div>
   <div style=" left: -8.33%; text-align: center; float: left; width: 50%; z-index: -10;">
     <div class="diagram-wrapper">
@@ -237,7 +232,7 @@ Transform CMS data...
       <div class="diagram is-header-footer" style="height: 75px">FOOTER</div>
     </div>
   </div>
-  <div style=" left: 31.25%; top: 75px; float: right; text-align: center; z-index: -10; width: 50%;">
+  <div style="margin-top: 20px; left: 31.25%; top: 75px; float: right; text-align: center; z-index: -10; width: 50%;">
     <img style="border:1px solid #aaa; margin:0; box-shadow: 10px 10px 12px 0px rgba(0,0,0,0.75); max-height: 90%; max-width: 80%;"
  -  data-src="content/images/camylla-full-page-trim4.png" alt="Header">
   </div>
@@ -245,7 +240,7 @@ Transform CMS data...
 
 ---
 
-<!-- .element: data-transition="fade-in fade-out"-->
+<!-- .element: data-transition="slide-in fade-out"-->
 
 <div>
   <div style=" left: -8.33%; text-align: center; float: left; width: 50%; z-index: -10;">
@@ -352,31 +347,6 @@ Transform CMS data...
   srcset="//media.aldoshoes.com/assets/shoename__400.jpg 400w,
           //media.aldoshoes.com/assets/shoename__1200.jpg 1200w"</span>
   sizes="I don't know, I guess 500?" <span style="opacity:0.5;">/&gt;
-</span></code></pre>
-
----
-
-<!-- .element: data-transition="fade-in fade-out"-->
-
-<p>Turn CMS image props...</p>
-
-```js
-  "image-asset": {
-    "dimensions": [
-      { "h": "400", "w": "400" },
-      { "h": "1200", "w": "1200" }
-    ],
-    "url": "//media.aldoshoes.com/assets/shoename__[dimension].jpg"
-  }
-```
-
-...into a responsive image
-
-<pre><code data-noescape class="smalltalk"><span style="opacity:0.5;">&lt;img
-  srcset="//media.aldoshoes.com/assets/shoename__400.jpg 400w,
-          //media.aldoshoes.com/assets/shoename__1200.jpg 1200w"</span>
-  data-sizes="auto"
-  class="lazyload" <span style="opacity:0.5;">/&gt;
 </span></code></pre>
 
 ---
@@ -513,9 +483,3 @@ Ship to an ALDO Store                   | 7-12 business days | Free
 ---
 
 ![Home](content/images/home.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
-
----
-
-<div style="text-align: center;">
-  ![Stessy](content/images/stessy.gif)<!-- .element: style="box-shadow: none" -->
-</div>
