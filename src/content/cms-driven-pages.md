@@ -443,13 +443,11 @@ Ship to an ALDO Store                   | 7-12 business days | Free
   <pre style="max-width:80%; white-space: pre-wrap;"><code data-noescape class="markdown" style="font-size:0.8em;color:#000;">&gt;1. Order placed
 &gt;2. Order processed long title
 &gt;3. Shipped
-&gt;4. Received other long title
-  </code></pre>
+&gt;4. Received other long title</code></pre>
 </div>
 
 <div style="text-align:center;margin:0;">
-  <pre style="max-width:80%; white-space: pre-wrap;"><code data-noescape class="markdown" style="font-size:0.8em;color:#000;">
-&#49;. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+  <pre style="max-width:80%; white-space: pre-wrap;"><code data-noescape class="markdown" style="font-size:0.8em;color:#000;">&#49;. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 &#50;. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </code></pre>
 </div>
 
