@@ -1,3 +1,9 @@
+<div style="text-align: center; margin-top:50px;">
+![viewports](content/images/cms-diagram.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
+</div>
+
+---
+
 ## Home page
 ![Home](content/images/home.png)<!-- .element: style="max-height: 70%; max-width: 70%; margin-top: -18px; box-shadow: none" -->
 
