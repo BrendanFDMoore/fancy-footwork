@@ -430,6 +430,13 @@ import AldoTable from 'components/markdown/table';
   } } />
 ```
 
+```
+<Markdown>
+  <AldoTable />
+  <AldoList />
+</Markdown>
+```
+
 ---
 
 <div style="text-align:center;margin:0;">
