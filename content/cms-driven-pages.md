@@ -96,10 +96,6 @@ Transform CMS data...
 
 ---
 
-![Unclosed divs](content/images/girl-shaking-fist.gif)<!-- .element: style="height: 80vh; max-width: 100%; margin-top: -18px; box-shadow: none" -->
-
----
-
 <pre><code data-noescape>"uuid-00": {
   "content-modules": {
     "uuid-01": { "type": "track-my-order" },
