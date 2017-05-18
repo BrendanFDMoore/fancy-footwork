@@ -60,7 +60,6 @@ Transform CMS data...
 }</code></pre>
 <div>
   <div style="left: -8.33%;text-align: center;float: left;width: 50%;z-index: -10;">
-    <p class="fragment" data-fragment-index="1" style="margin-bottom: 5px;"> Transmogrify! </p>
     <img style="border:none;box-shadow: none;max-height: 85%; max-width: 85%;margin-top: 5px;" data-src="content/images/transmogrify.png" alt="Transmogrify!">
     <!-- .element: class="fragment" data-fragment-index="1"-->
   </div>
